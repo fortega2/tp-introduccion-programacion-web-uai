@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ===== Metadatos (bloque replicado en todas las páginas) ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El idioma lo declara lang="es": el validador W3C marca como obsoleto
+         el meta content-language, así que http-equiv se usa para el modo
+         de compatibilidad del navegador -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Metadatos propios de esta página -->
+    <title>Spider-Man 2 (2004) | Spider-Man: la trilogía de Sam Raimi</title>
+    <meta name="description" content="Ficha técnica, trama y análisis de Spider-Man 2 (2004): Peter Parker frente al Doctor Octopus y al costo de llevar una doble vida.">
+    <meta name="keywords" content="Spider-Man 2, 2004, Sam Raimi, Tobey Maguire, Alfred Molina, Doctor Octopus, ficha técnica">
+
+    <!-- Metadatos comunes del sitio -->
+    <meta name="author" content="Facundo Ernesto Ortega">
+    <meta name="generator" content="Escrito a mano: HTML, CSS y JavaScript">
+    <meta name="application-name" content="Spider-Man Trilogía">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="rating" content="general">
+    <meta name="theme-color" content="#b11313" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0f1a" media="(prefers-color-scheme: dark)">
+
+    <!-- Open Graph: cómo se ve el enlace al compartirlo en redes -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Spider-Man: la trilogía de Sam Raimi">
+    <meta property="og:title" content="Spider-Man 2 (2004) | Spider-Man: la trilogía de Sam Raimi">
+    <meta property="og:description" content="Ficha técnica, trama y análisis de Spider-Man 2 (2004): Peter Parker frente al Doctor Octopus y al costo de llevar una doble vida.">
+    <meta property="og:image" content="https://spiderman-trilogia.sonuserver.com/images/compartir.png">
+    <meta property="og:image:alt" content="Título del sitio sobre un fondo azul con una telaraña roja">
+    <meta property="og:url" content="https://spiderman-trilogia.sonuserver.com/spider-man-2-2004.html">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spider-Man 2 (2004) | Spider-Man: la trilogía de Sam Raimi">
+    <meta name="twitter:description" content="Ficha técnica, trama y análisis de Spider-Man 2 (2004): Peter Parker frente al Doctor Octopus y al costo de llevar una doble vida.">
+    <meta name="twitter:image" content="https://spiderman-trilogia.sonuserver.com/images/compartir.png">
+
+    <!-- Íconos -->
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/iconos/apple-touch-icon.png">
+
+    <!-- Manifiesto: permite instalar el sitio como app (PWA) -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Tipografías (Google Fonts) y hoja de estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Source+Sans+3:ital,wght@0,400;0,700;1,400&amp;display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+    <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
+    <script src="js/tema.js"></script>
+
+    <!-- Scripts: defer los ejecuta cuando el DOM ya está cargado -->
+    <script src="js/navegacion.js" defer></script>
+    <script src="js/volver-arriba.js" defer></script>
+</head>
+<body>
+    <!-- Enlace para saltear la navegación con teclado o lector de pantalla -->
+    <a class="saltar-al-contenido" href="#contenido" title="Saltear el menú e ir al contenido">Saltar al contenido principal</a>
+
+    <!-- ===== Encabezado y navegación (bloque replicado en todas las páginas) ===== -->
+    <header class="encabezado">
+        <a class="marca" href="index.html" title="Volver a la página de inicio">
+            <span class="marca__logo" aria-hidden="true"></span>
+            <span class="marca__nombre">Spider-Man <span class="marca__detalle">La trilogía de Sam Raimi</span></span>
+        </a>
+
+        <!-- Botón de modo oscuro: lo muestra tema.js -->
+        <button class="boton-tema" type="button" aria-label="Modo oscuro" aria-pressed="false" title="Cambiar entre modo claro y oscuro" hidden>
+            <svg class="boton-tema__luna" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <svg class="boton-tema__sol" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <!-- Botón del menú en mobile: lo muestra navegacion.js -->
+        <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+            <svg class="boton-menu__icono" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span class="boton-menu__texto">Menú</span>
+        </button>
+
+        <nav class="navegacion" aria-label="Principal">
+            <ul class="navegacion__lista" id="menu-principal">
+                <li><a href="index.html" title="Ir a la página de inicio">Inicio</a></li>
+                <li><a href="sobre-la-trilogia.html" title="Contexto y datos generales de la trilogía">Sobre la trilogía</a></li>
+                <li><a href="spider-man-2002.html" title="Ficha técnica, trama y análisis de la primera película">Spider-Man (2002)</a></li>
+                <li><a href="spider-man-2-2004.html" title="Ficha técnica, trama y análisis de la segunda película" aria-current="page">Spider-Man 2 (2004)</a></li>
+                <li><a href="spider-man-3-2007.html" title="Ficha técnica, trama y análisis de la tercera película">Spider-Man 3 (2007)</a></li>
+                <li><a href="personajes.html" title="Perfiles de los personajes principales">Personajes</a></li>
+                <li><a href="villanos.html" title="Análisis de los villanos de la saga">Villanos</a></li>
+                <li><a href="linea-de-tiempo.html" title="Cronología interactiva de la saga">Línea de tiempo</a></li>
+                <li><a href="curiosidades.html" title="Datos de producción y detrás de escena">Curiosidades</a></li>
+                <li><a href="legado.html" title="Influencia de la trilogía en el cine de superhéroes">Legado</a></li>
+                <li><a href="blog.html" title="Reseñas y artículos de opinión">Blog</a></li>
+                <li><a href="contacto.html" title="Formulario para enviar comentarios y consultas">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Contenido principal (propio de cada página) ===== -->
+    <main id="contenido" class="contenido" tabindex="-1">
+        <h1>Spider-Man 2 (2004)</h1>
+        <p>Dos años después de convertirse en Spider-Man, Peter no puede con todo: pierde trabajos, descuida sus estudios y ve cómo Mary Jane se aleja. Mientras duda de si quiere seguir siendo un héroe, el brillante científico Otto Octavius se transforma en el Doctor Octopus.</p>
+        <p>Muchos la consideran la mejor de la saga. Acá repasamos su ficha técnica, su trama y las razones de ese reconocimiento.</p>
+    </main>
+
+    <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
+    <footer class="pie">
+        <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
+        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+    </footer>
+
+    <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
+    <button class="volver-arriba" type="button" aria-label="Volver arriba" title="Volver al principio de la página" hidden>
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+</body>
+</html>
