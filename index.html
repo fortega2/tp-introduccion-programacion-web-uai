@@ -52,6 +52,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Source+Sans+3:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="css/estilos.css">
 
+    <!-- Datos estructurados (Schema.org): le describen el sitio a los buscadores.
+         Es un bloque de datos JSON, no código que se ejecute. -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Spider-Man: la trilogía de Sam Raimi",
+        "url": "https://spiderman-trilogia.sonuserver.com/",
+        "inLanguage": "es",
+        "description": "Sitio informativo sobre la trilogía original de Spider-Man dirigida por Sam Raimi (2002-2007).",
+        "author": {
+            "@type": "Person",
+            "name": "Facundo Ernesto Ortega"
+        },
+        "about": {
+            "@type": "MovieSeries",
+            "name": "Trilogía de Spider-Man de Sam Raimi",
+            "director": {
+                "@type": "Person",
+                "name": "Sam Raimi"
+            }
+        }
+    }
+    </script>
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
