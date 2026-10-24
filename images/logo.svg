@@ -1,0 +1,4 @@
+<!-- Logo del sitio: telaraña original de 8 radios. Toma el color del texto (currentColor). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M32 32L32 2M32 32L53.2 10.8M32 32L62 32M32 32L53.2 53.2M32 32L32 62M32 32L10.8 53.2M32 32L2 32M32 32L10.8 10.8M32 23Q34.7 25.5 38.4 25.6Q38.5 29.3 41 32Q38.5 34.7 38.4 38.4Q34.7 38.5 32 41Q29.3 38.5 25.6 38.4Q25.5 34.7 23 32Q25.5 29.3 25.6 25.6Q29.3 25.5 32 23M32 15Q37.1 19.7 44 20Q44.3 26.9 49 32Q44.3 37.1 44 44Q37.1 44.3 32 49Q26.9 44.3 20 44Q19.7 37.1 15 32Q19.7 26.9 20 20Q26.9 19.7 32 15M32 7Q39.5 14 49.7 14.3Q50 24.5 57 32Q50 39.5 49.7 49.7Q39.5 50 32 57Q24.5 50 14.3 49.7Q14 39.5 7 32Q14 24.5 14.3 14.3Q24.5 14 32 7"/>
+</svg>
