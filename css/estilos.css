@@ -10,7 +10,7 @@
      7. Contenido principal
      8. Pie de página
      9. Botón volver arriba
-    10. Escritorio (media query)
+    10. Pantallas medianas y escritorio (media queries)
    ========================================================================== */
 
 
@@ -181,6 +181,17 @@ main:focus {
     outline: none;
 }
 
+/* En pantallas angostas el texto "Menú" se oculta a la vista,
+   pero los lectores de pantalla lo siguen anunciando */
+.boton-menu__texto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 /* Skip link: oculto fuera de pantalla hasta que recibe el foco */
 .saltar-al-contenido {
     position: absolute;
@@ -220,7 +231,7 @@ main:focus {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--espacio-s) var(--espacio-m);
+    gap: var(--espacio-s);
     padding: var(--espacio-s) var(--espacio-m);
     background-color: var(--color-encabezado);
     color: var(--color-blanco);
@@ -240,8 +251,8 @@ main:focus {
 /* El logo es un SVG usado como máscara: se pinta con el color del texto */
 .marca__logo {
     flex-shrink: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
     background-color: currentColor;
     mask-image: url("../images/logo.svg");
     mask-position: center;
@@ -253,12 +264,15 @@ main:focus {
     display: flex;
     flex-direction: column;
     font-family: var(--fuente-titulos);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     line-height: 1;
     letter-spacing: 0.04em;
 }
 
+/* El subtítulo se oculta en pantallas muy angostas para que la marca
+   y los botones entren en una sola fila */
 .marca__detalle {
+    display: none;
     font-family: var(--fuente-texto);
     font-size: var(--texto-chico);
     letter-spacing: normal;
@@ -275,7 +289,7 @@ main:focus {
     align-items: center;
     gap: var(--espacio-s);
     min-height: 2.75rem;
-    padding: var(--espacio-s) var(--espacio-m);
+    padding: var(--espacio-s) var(--espacio-s);
     background-color: transparent;
     color: var(--color-blanco);
     border: 1px solid currentColor;
@@ -410,13 +424,39 @@ main:focus {
 }
 
 
-/* ---------- 10. Escritorio ----------
-   Desde 64rem la navegación pasa a ser una fila que se acomoda sola. */
+/* ---------- 10. Pantallas medianas y escritorio ---------- */
+/* Desde 25rem hay lugar para el subtítulo y el texto "Menú" */
+@media (min-width: 25rem) {
+    .marca__detalle {
+        display: block;
+    }
+
+    .boton-menu__texto {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip-path: none;
+    }
+}
+
 @media (min-width: 64rem) {
     .encabezado {
         padding-inline: var(--espacio-xl);
     }
 
+    .marca__logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .marca__nombre {
+        font-size: 1.75rem;
+    }
+}
+
+/* Desde 80rem entran los 12 enlaces en una fila; antes se usa el botón "Menú" */
+@media (min-width: 80rem) {
     /* En escritorio el menú siempre está a la vista */
     .boton-menu,
     .boton-menu[hidden] {
@@ -430,8 +470,9 @@ main:focus {
     .navegacion__lista {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: var(--espacio-xs);
+        justify-content: space-between;
+        gap: var(--espacio-xs) 0;
+        font-size: 0.9375rem;
     }
 
     .navegacion__lista a {
