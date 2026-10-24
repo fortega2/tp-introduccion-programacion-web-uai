@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Hoja de estilos principal — Spider-Man: la trilogía de Sam Raimi
+   Índice:
+     1. Variables (paleta, tipografía, espaciados)
+     2. Reset y base
+     3. Tipografía y enlaces
+     4. Accesibilidad (foco, skip link, movimiento reducido)
+   ========================================================================== */
+
+
+/* ---------- 1. Variables ----------
+   La paleta toma los colores del traje: rojo, azul y negro.
+   Todos los pares texto/fondo superan el contraste 4.5:1 (WCAG AA). */
+:root {
+    /* Colores */
+    --color-rojo: #b11313;
+    --color-azul: #0d3b8c;
+    --color-negro: #0b0f1a;
+    --color-blanco: #ffffff;
+    --color-amarillo: #ffd23f;
+
+    --color-fondo: #f6f7fb;
+    --color-superficie: #ffffff;
+    --color-texto: #14161c;
+    --color-texto-suave: #4a5163;
+    --color-enlace: var(--color-azul);
+    --color-acento: var(--color-rojo);
+    --color-borde: #d5d9e3;
+    --color-foco: var(--color-azul);
+
+    /* Tipografías: títulos estilo cómic y texto de lectura cómoda */
+    --fuente-titulos: "Bangers", "Impact", sans-serif;
+    --fuente-texto: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+    /* Escala tipográfica */
+    --texto-chico: 0.875rem;
+    --texto-base: 1.0625rem;
+    --texto-h3: 1.5rem;
+    --texto-h2: clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem);
+    --texto-h1: clamp(2.25rem, 1.6rem + 3vw, 3.5rem);
+
+    /* Espaciados: se usan siempre estos para mantener coherencia */
+    --espacio-xs: 0.25rem;
+    --espacio-s: 0.5rem;
+    --espacio-m: 1rem;
+    --espacio-l: 1.5rem;
+    --espacio-xl: 2.5rem;
+
+    /* Otros */
+    --ancho-maximo: 72rem;
+    --ancho-lectura: 42rem;
+    --radio: 0.5rem;
+    --transicion: 0.2s ease;
+}
+
+
+/* ---------- 2. Reset y base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* El tamaño de los botones viene del texto del sitio, no del navegador */
+button {
+    font: inherit;
+}
+
+
+/* ---------- 3. Tipografía y enlaces ---------- */
+h1,
+h2,
+h3 {
+    margin: 0 0 var(--espacio-m);
+    font-family: var(--fuente-titulos);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+}
+
+h1 {
+    font-size: var(--texto-h1);
+    color: var(--color-acento);
+}
+
+h2 {
+    font-size: var(--texto-h2);
+}
+
+h3 {
+    font-size: var(--texto-h3);
+}
+
+p {
+    margin: 0 0 var(--espacio-m);
+    max-width: var(--ancho-lectura);
+}
+
+a {
+    color: var(--color-enlace);
+    text-underline-offset: 0.15em;
+}
+
+a:hover {
+    text-decoration-thickness: 0.15em;
+}
+
+
+/* ---------- 4. Accesibilidad ---------- */
+
+/* Foco bien visible en todo lo interactivo, solo al navegar con teclado */
+:focus-visible {
+    outline: 0.1875rem solid var(--color-foco);
+    outline-offset: 0.1875rem;
+}
+
+/* El <main> recibe el foco desde el skip link, pero no necesita marco */
+main:focus {
+    outline: none;
+}
+
+/* Skip link: oculto fuera de pantalla hasta que recibe el foco */
+.saltar-al-contenido {
+    position: absolute;
+    top: var(--espacio-s);
+    left: var(--espacio-s);
+    z-index: 100;
+    padding: var(--espacio-s) var(--espacio-m);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    font-weight: 700;
+    border-radius: var(--radio);
+    transform: translateY(-200%);
+}
+
+.saltar-al-contenido:focus {
+    transform: translateY(0);
+    outline-color: var(--color-amarillo);
+}
+
+/* Quien pidió menos movimiento en su sistema no ve animaciones */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+    }
+}
