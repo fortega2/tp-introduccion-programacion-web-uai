@@ -225,8 +225,43 @@ main:focus {
 
 
 /* ---------- 6. Navegación principal ---------- */
+
+/* Botón "Menú" de mobile (navegacion.js le quita el atributo hidden) */
+.boton-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacio-s);
+    min-height: 2.75rem;
+    padding: var(--espacio-s) var(--espacio-m);
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 1px solid currentColor;
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.boton-menu:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Sin esta regla el display de arriba le ganaría al atributo hidden */
+.boton-menu[hidden] {
+    display: none;
+}
+
+.boton-menu__icono {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .navegacion {
     flex-basis: 100%;
+}
+
+/* Menú colapsado: solo se muestra cuando está abierto */
+.navegacion--colapsable:not(.navegacion--abierta) {
+    display: none;
 }
 
 .navegacion__lista {
@@ -288,6 +323,16 @@ main:focus {
 @media (min-width: 64rem) {
     .encabezado {
         padding-inline: var(--espacio-xl);
+    }
+
+    /* En escritorio el menú siempre está a la vista */
+    .boton-menu,
+    .boton-menu[hidden] {
+        display: none;
+    }
+
+    .navegacion--colapsable:not(.navegacion--abierta) {
+        display: block;
     }
 
     .navegacion__lista {

@@ -48,6 +48,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Source+Sans+3:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Scripts: defer los ejecuta cuando el DOM ya está cargado -->
+    <script src="js/navegacion.js" defer></script>
 </head>
 <body>
     <!-- Enlace para saltear la navegación con teclado o lector de pantalla -->
@@ -59,6 +62,14 @@
             <span class="marca__logo" aria-hidden="true"></span>
             <span class="marca__nombre">Spider-Man <span class="marca__detalle">La trilogía de Sam Raimi</span></span>
         </a>
+
+        <!-- Botón del menú en mobile: lo muestra navegacion.js -->
+        <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+            <svg class="boton-menu__icono" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Menú
+        </button>
 
         <nav class="navegacion" aria-label="Principal">
             <ul class="navegacion__lista" id="menu-principal">
