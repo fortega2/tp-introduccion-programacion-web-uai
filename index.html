@@ -51,6 +51,7 @@
 
     <!-- Scripts: defer los ejecuta cuando el DOM ya está cargado -->
     <script src="js/navegacion.js" defer></script>
+    <script src="js/volver-arriba.js" defer></script>
 </head>
 <body>
     <!-- Enlace para saltear la navegación con teclado o lector de pantalla -->
@@ -100,5 +101,12 @@
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
         <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
     </footer>
+
+    <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
+    <button class="volver-arriba" type="button" aria-label="Volver arriba" title="Volver al principio de la página" hidden>
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+            <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
 </body>
 </html>

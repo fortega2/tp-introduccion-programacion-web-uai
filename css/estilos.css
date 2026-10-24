@@ -9,7 +9,8 @@
      6. Navegación principal
      7. Contenido principal
      8. Pie de página
-     9. Escritorio (media query)
+     9. Botón volver arriba
+    10. Escritorio (media query)
    ========================================================================== */
 
 
@@ -318,7 +319,37 @@ main:focus {
 }
 
 
-/* ---------- 9. Escritorio ----------
+/* ---------- 9. Botón volver arriba ----------
+   Fijo abajo a la derecha, por encima del contenido. */
+.volver-arriba {
+    position: fixed;
+    right: var(--espacio-m);
+    bottom: var(--espacio-m);
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    border: 0.125rem solid var(--color-blanco);
+    border-radius: 50%;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform var(--transicion);
+}
+
+.volver-arriba:hover {
+    transform: translateY(-0.2rem);
+}
+
+.volver-arriba[hidden] {
+    display: none;
+}
+
+
+/* ---------- 10. Escritorio ----------
    Desde 64rem la navegación pasa a ser una fila que se acomoda sola. */
 @media (min-width: 64rem) {
     .encabezado {
