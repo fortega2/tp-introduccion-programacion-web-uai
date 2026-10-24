@@ -49,6 +49,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Source+Sans+3:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="css/estilos.css">
 
+    <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
+    <script src="js/tema.js"></script>
+
     <!-- Scripts: defer los ejecuta cuando el DOM ya está cargado -->
     <script src="js/navegacion.js" defer></script>
     <script src="js/volver-arriba.js" defer></script>
@@ -63,6 +66,17 @@
             <span class="marca__logo" aria-hidden="true"></span>
             <span class="marca__nombre">Spider-Man <span class="marca__detalle">La trilogía de Sam Raimi</span></span>
         </a>
+
+        <!-- Botón de modo oscuro: lo muestra tema.js -->
+        <button class="boton-tema" type="button" aria-label="Modo oscuro" aria-pressed="false" title="Cambiar entre modo claro y oscuro" hidden>
+            <svg class="boton-tema__luna" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <svg class="boton-tema__sol" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
 
         <!-- Botón del menú en mobile: lo muestra navegacion.js -->
         <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>

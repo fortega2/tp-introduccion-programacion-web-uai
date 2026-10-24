@@ -1,7 +1,7 @@
 /* ==========================================================================
    Hoja de estilos principal — Spider-Man: la trilogía de Sam Raimi
    Índice:
-     1. Variables (paleta, tipografía, espaciados)
+     1. Variables (paleta, tipografía, espaciados) y modo oscuro
      2. Reset y base
      3. Tipografía y enlaces
      4. Accesibilidad (foco, skip link, movimiento reducido)
@@ -33,6 +33,9 @@
     --color-acento: var(--color-rojo);
     --color-borde: #d5d9e3;
     --color-foco: var(--color-azul);
+    --color-encabezado: var(--color-azul);
+
+    color-scheme: light;
 
     /* Tipografías: títulos estilo cómic y texto de lectura cómoda */
     --fuente-titulos: "Bangers", "Impact", sans-serif;
@@ -57,6 +60,40 @@
     --ancho-lectura: 42rem;
     --radio: 0.5rem;
     --transicion: 0.2s ease;
+}
+
+
+/* Modo oscuro: solo cambian los colores de uso, no la estructura.
+   Se aplica si el usuario lo eligió con el botón (data-tema="oscuro")
+   o si su sistema está en oscuro y nunca eligió un tema. */
+:root[data-tema="oscuro"] {
+    --color-fondo: #0b0f1a;
+    --color-superficie: #151b2b;
+    --color-texto: #eef1f7;
+    --color-texto-suave: #aeb7c9;
+    --color-enlace: #8db4ff;
+    --color-acento: #ff7a7a;
+    --color-borde: #2a3247;
+    --color-foco: var(--color-amarillo);
+    --color-encabezado: #101a33;
+
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-tema="claro"]) {
+        --color-fondo: #0b0f1a;
+        --color-superficie: #151b2b;
+        --color-texto: #eef1f7;
+        --color-texto-suave: #aeb7c9;
+        --color-enlace: #8db4ff;
+        --color-acento: #ff7a7a;
+        --color-borde: #2a3247;
+        --color-foco: var(--color-amarillo);
+        --color-encabezado: #101a33;
+
+        color-scheme: dark;
+    }
 }
 
 
@@ -185,7 +222,7 @@ main:focus {
     align-items: center;
     gap: var(--espacio-s) var(--espacio-m);
     padding: var(--espacio-s) var(--espacio-m);
-    background-color: var(--color-azul);
+    background-color: var(--color-encabezado);
     color: var(--color-blanco);
     border-bottom: 0.25rem solid var(--color-rojo);
     --color-foco: var(--color-amarillo);
@@ -227,8 +264,10 @@ main:focus {
 
 /* ---------- 6. Navegación principal ---------- */
 
-/* Botón "Menú" de mobile (navegacion.js le quita el atributo hidden) */
-.boton-menu {
+/* Botones del encabezado: "Menú" en mobile (navegacion.js) y tema
+   (tema.js). Cada script les quita el atributo hidden. */
+.boton-menu,
+.boton-tema {
     display: inline-flex;
     align-items: center;
     gap: var(--espacio-s);
@@ -242,13 +281,32 @@ main:focus {
     transition: background-color var(--transicion);
 }
 
-.boton-menu:hover {
+.boton-menu:hover,
+.boton-tema:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Sin esta regla el display de arriba le ganaría al atributo hidden */
-.boton-menu[hidden] {
+.boton-menu[hidden],
+.boton-tema[hidden] {
     display: none;
+}
+
+/* El botón del tema es solo un ícono, pero mantiene el área táctil */
+.boton-tema {
+    min-width: 2.75rem;
+    padding: var(--espacio-s);
+    justify-content: center;
+}
+
+/* Se ve la luna en modo claro y el sol en modo oscuro */
+.boton-tema__sol,
+.boton-tema[aria-pressed="true"] .boton-tema__luna {
+    display: none;
+}
+
+.boton-tema[aria-pressed="true"] .boton-tema__sol {
+    display: block;
 }
 
 .boton-menu__icono {
