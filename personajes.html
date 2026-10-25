@@ -114,14 +114,126 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Personajes</h1>
-        <p>Detrás de la máscara, la trilogía es una historia sobre personas: un joven que intenta hacer lo correcto, una amistad que se rompe, un amor que nunca encuentra el momento y una familia que sostiene a Peter cuando todo se complica.</p>
-        <p>En esta sección conocés a los personajes que acompañan a Peter Parker a lo largo de las tres películas y lo que cada uno aporta a su historia.</p>
+        <p class="entradilla">Detrás de la máscara, la trilogía es una historia sobre personas: un joven que intenta hacer lo correcto, una amistad que se rompe, un amor que nunca encuentra el momento y una familia que sostiene a Peter cuando todo se complica.</p>
+        <p>Estos son los personajes que lo acompañan a lo largo de las tres películas. A los villanos les dedicamos <a href="villanos.html">su propia sección</a>.</p>
+
+        <!-- Cada tarjeta indica en data-* sus películas y su categoría: el filtro de personajes las usa -->
+        <ul class="grilla-tarjetas lista-personajes">
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002 2004 2007" data-categoria="heroe">
+                    <img class="tarjeta__imagen" src="images/personajes/peter-parker.webp" width="480" height="600"
+                         alt="Peter Parker, con remera y campera, mira asombrado su mano abierta en una calle de Nueva York">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Peter Parker</h2>
+                        <p class="tarjeta__dato">Héroe · Interpretado por Tobey Maguire</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                            <li class="etiqueta">2004</li>
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>Un estudiante brillante y tímido de Queens que, después de la picadura de una araña, se convierte en Spider-Man. Su gran conflicto nunca es solo el villano de turno, sino cómo sostener su vida personal sin abandonar la responsabilidad que eligió.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002 2004 2007" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/mary-jane.webp" width="480" height="600" loading="lazy"
+                         alt="Mary Jane Watson, pelirroja y sonriente, con un abrigo verde en una calle soleada">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Mary Jane Watson</h2>
+                        <p class="tarjeta__dato">Secundaria · Interpretada por Kirsten Dunst</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                            <li class="etiqueta">2004</li>
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>La vecina de la que Peter está enamorado desde chico. Sueña con ser actriz y, a lo largo de la saga, pasa de ser alguien a quien rescatar a una mujer que toma sus propias decisiones, aunque eso implique arriesgarse.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002 2004 2007" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/harry-osborn.webp" width="480" height="600" loading="lazy"
+                         alt="Harry Osborn, de traje, mira de reojo con gesto tenso en una vereda de la ciudad">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Harry Osborn</h2>
+                        <p class="tarjeta__dato">Secundario · Interpretado por James Franco</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                            <li class="etiqueta">2004</li>
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>El mejor amigo de Peter y heredero de Oscorp. Vive a la sombra de un padre exigente y, tras su muerte, culpa a Spider-Man. Su amistad con Peter, que se rompe y se recompone, es uno de los hilos que atraviesan toda la trilogía. En la tercera película se convierte en el <a href="villanos.html">Nuevo Duende</a>.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002 2004 2007" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/tia-may.webp" width="480" height="600" loading="lazy"
+                         alt="La tía May, de pelo blanco, con un saco rojo y un pañuelo, mira con ternura hacia abajo">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Tía May</h2>
+                        <p class="tarjeta__dato">Secundaria · Interpretada por Rosemary Harris</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                            <li class="etiqueta">2004</li>
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>La tía que crió a Peter y su brújula moral. Después de perder a Ben, sigue adelante con dignidad y sin dinero, y sus consejos, como el discurso sobre los héroes de <em>Spider-Man 2</em>, le devuelven a Peter el rumbo más de una vez.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/tio-ben.webp" width="480" height="600" loading="lazy"
+                         alt="El tío Ben, un hombre mayor de pelo canoso y camisa a cuadros, mira con seriedad en la cocina de su casa">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Tío Ben</h2>
+                        <p class="tarjeta__dato">Secundario · Interpretado por Cliff Robertson</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                        </ul>
+                        <p>El tío de Peter y la figura paterna que lo forma. Su muerte, que Peter pudo haber evitado, es el punto de partida de Spider-Man, y su frase sobre el poder y la responsabilidad se convierte en el lema de la saga. Vuelve a aparecer en un recuerdo en <em>Spider-Man 2</em>.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002 2004 2007" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/jonah-jameson.webp" width="480" height="600" loading="lazy"
+                         alt="J. Jonah Jameson, de bigote y saco, se ríe a carcajadas en su oficina">
+                    <div class="tarjeta__cuerpo">
+                        <h2>J. Jonah Jameson</h2>
+                        <p class="tarjeta__dato">Secundario · Interpretado por J. K. Simmons</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                            <li class="etiqueta">2004</li>
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>El gritón director del diario <em>Daily Bugle</em>, que le compra fotos de Spider-Man a Peter mientras lo acusa de amenaza pública. Es el gran alivio cómico de la trilogía, y la interpretación de J. K. Simmons es tan querida que el actor volvió al personaje años después.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2007" data-categoria="secundario">
+                    <img class="tarjeta__imagen" src="images/personajes/gwen-stacy.webp" width="480" height="600" loading="lazy"
+                         alt="Gwen Stacy, rubia y con un saco negro, mira de costado con expresión seria">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Gwen Stacy</h2>
+                        <p class="tarjeta__dato">Secundaria · Interpretada por Bryce Dallas Howard</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p>Compañera de Peter en la universidad e hija del capitán de policía George Stacy. Spider-Man la salva de una caída y, sin buscarlo, ella se convierte en motivo de celos para Mary Jane y en blanco del interés de Eddie Brock.</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
