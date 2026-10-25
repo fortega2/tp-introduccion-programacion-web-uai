@@ -593,6 +593,19 @@ main:focus {
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.18);
 }
 
+/* Retratos de personajes y villanos: en mobile se recortan a 4:3,
+   enfocados en la cara, para que la tarjeta no ocupe toda la pantalla */
+.tarjeta-personaje .tarjeta__imagen {
+    aspect-ratio: 4 / 3;
+    object-position: center 20%;
+}
+
+@media (min-width: 40rem) {
+    .tarjeta-personaje .tarjeta__imagen {
+        aspect-ratio: 4 / 5;
+    }
+}
+
 /* Etiquetas chicas (películas en las que aparece un personaje, etc.) */
 .etiquetas {
     display: flex;

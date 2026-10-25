@@ -114,14 +114,93 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Villanos</h1>
-        <p>Una de las marcas de la trilogía es que sus villanos no son simplemente malos: casi todos son personas comunes que una tragedia, un experimento fallido o la ambición convirtieron en amenazas.</p>
-        <p>Acá analizamos a cada uno de ellos, qué los mueve y qué representan en el camino de Peter Parker.</p>
+        <p class="entradilla">Una de las marcas de la trilogía es que sus villanos no son simplemente malos: casi todos son personas comunes a las que una tragedia, un experimento fallido o el rencor convirtieron en amenazas.</p>
+        <p>Cada uno funciona además como un espejo de Peter: le muestra en qué podría convertirse si eligiera mal.</p>
+
+        <!-- Mismos atributos data-* que en Personajes, con la categoría "villano" -->
+        <ul class="grilla-tarjetas lista-personajes">
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2002" data-categoria="villano">
+                    <img class="tarjeta__imagen" src="images/villanos/duende-verde.webp" width="480" height="600"
+                         alt="El Duende Verde, con su armadura y máscara verdes de ojos amarillos, sonríe de manera amenazante">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Duende Verde</h2>
+                        <p class="tarjeta__dato">Villano · Norman Osborn, interpretado por Willem Dafoe</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2002</li>
+                        </ul>
+                        <p><strong>Origen:</strong> el dueño de Oscorp prueba en sí mismo un suero de mejora física para no perder un contrato militar. El experimento le da fuerza sobrehumana y despierta una segunda personalidad sin límites.</p>
+                        <p><strong>Qué representa:</strong> el poder sin responsabilidad. Le ofrece a Peter una alianza y le muestra el camino opuesto al que le enseñó el tío Ben.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2004" data-categoria="villano">
+                    <img class="tarjeta__imagen" src="images/villanos/doctor-octopus.webp" width="480" height="600" loading="lazy"
+                         alt="El Doctor Octopus, con anteojos oscuros y sobretodo, rodeado por sus cuatro brazos mecánicos">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Doctor Octopus</h2>
+                        <p class="tarjeta__dato">Villano · Otto Octavius, interpretado por Alfred Molina</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2004</li>
+                        </ul>
+                        <p><strong>Origen:</strong> un científico admirado por Peter cuyo experimento de fusión falla, mata a su esposa y le deja fusionados al cuerpo cuatro brazos mecánicos con inteligencia artificial propia.</p>
+                        <p><strong>Qué representa:</strong> un hombre bueno que perdió el rumbo. Cuando Peter le recuerda quién era, recupera el control de sus brazos y se sacrifica para salvar la ciudad.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2007" data-categoria="villano">
+                    <img class="tarjeta__imagen" src="images/villanos/hombre-de-arena.webp" width="480" height="600" loading="lazy"
+                         alt="Flint Marko, con su suéter a rayas verdes, mira con desconfianza mientras su brazo se vuelve de arena">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Hombre de Arena</h2>
+                        <p class="tarjeta__dato">Villano · Flint Marko, interpretado por Thomas Haden Church</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p><strong>Origen:</strong> un preso fugado que cae en un experimento científico y queda fusionado con la arena. Roba para pagar el tratamiento de su hija enferma.</p>
+                        <p><strong>Qué representa:</strong> la posibilidad del perdón. Su revelación sobre la muerte del tío Ben despierta el deseo de venganza de Peter, y su arrepentimiento final lo obliga a soltarlo.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2007" data-categoria="villano">
+                    <img class="tarjeta__imagen" src="images/villanos/venom.webp" width="480" height="600" loading="lazy"
+                         alt="Venom, una criatura negra de ojos blancos, abre una boca enorme llena de colmillos afilados">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Venom</h2>
+                        <p class="tarjeta__dato">Villano · Eddie Brock, interpretado por Topher Grace</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p><strong>Origen:</strong> un fotógrafo rival de Peter en el <em>Daily Bugle</em> que, humillado y despedido, se une al simbionte alienígena que Peter acababa de rechazar.</p>
+                        <p><strong>Qué representa:</strong> lo que Peter pudo haber sido si se dejaba consumir por el traje negro: el rencor y el egoísmo llevados al extremo.</p>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="tarjeta tarjeta-personaje" data-peliculas="2007" data-categoria="villano">
+                    <img class="tarjeta__imagen" src="images/villanos/nuevo-duende.webp" width="480" height="600" loading="lazy"
+                         alt="Harry Osborn sonríe con una cicatriz en el rostro, con un gesto entre burlón y amenazante">
+                    <div class="tarjeta__cuerpo">
+                        <h2>Nuevo Duende</h2>
+                        <p class="tarjeta__dato">Villano · Harry Osborn, interpretado por James Franco</p>
+                        <ul class="etiquetas" aria-label="Películas en las que aparece">
+                            <li class="etiqueta">2007</li>
+                        </ul>
+                        <p><strong>Origen:</strong> convencido de que Spider-Man mató a su padre, Harry usa el suero y el equipo del Duende Verde para vengarse de su mejor amigo.</p>
+                        <p><strong>Qué representa:</strong> una amistad envenenada por la culpa y los secretos. Es el único villano de la saga que termina peleando junto a Peter.</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
