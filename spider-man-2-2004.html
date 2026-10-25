@@ -56,6 +56,30 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <!-- Datos estructurados (Schema.org) de la película: bloque de datos JSON, no código -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Movie",
+        "name": "Spider-Man 2",
+        "datePublished": "2004-06-30",
+        "duration": "PT127M",
+        "image": "https://spiderman-trilogia.sonuserver.com/images/peliculas/spider-man-2-2004-poster.webp",
+        "director": { "@type": "Person", "name": "Sam Raimi" },
+        "author": { "@type": "Person", "name": "Alvin Sargent" },
+        "musicBy": { "@type": "Person", "name": "Danny Elfman" },
+        "productionCompany": { "@type": "Organization", "name": "Columbia Pictures" },
+        "actor": [
+            { "@type": "Person", "name": "Tobey Maguire" },
+            { "@type": "Person", "name": "Kirsten Dunst" },
+            { "@type": "Person", "name": "James Franco" },
+            { "@type": "Person", "name": "Alfred Molina" }
+        ]
+    }
+    </script>
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -114,14 +138,131 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Spider-Man 2 (2004)</h1>
-        <p>Dos años después de convertirse en Spider-Man, Peter no puede con todo: pierde trabajos, descuida sus estudios y ve cómo Mary Jane se aleja. Mientras duda de si quiere seguir siendo un héroe, el brillante científico Otto Octavius se transforma en el Doctor Octopus.</p>
-        <p>Muchos la consideran la mejor de la saga. Acá repasamos su ficha técnica, su trama y las razones de ese reconocimiento.</p>
+        <p class="entradilla">Peter Parker descubre que ser un héroe tiene un precio, y que a veces el enemigo más difícil es la propia duda. Para muchos fans, la mejor película de la saga.</p>
+
+        <!-- Póster y ficha técnica -->
+        <div class="pelicula-cabecera">
+            <img class="pelicula-cabecera__poster" src="images/peliculas/spider-man-2-2004-poster.webp" width="500" height="750"
+                 alt="Póster de Spider-Man 2: el héroe abraza a Mary Jane en lo alto de la ciudad, al atardecer">
+            <section aria-labelledby="titulo-ficha">
+                <h2 id="titulo-ficha">Ficha técnica</h2>
+                <dl class="ficha-tecnica">
+                    <dt>Dirección</dt>
+                    <dd>Sam Raimi</dd>
+                    <dt>Guion</dt>
+                    <dd>Alvin Sargent</dd>
+                    <dt>Historia</dt>
+                    <dd>Alfred Gough, Miles Millar y Michael Chabon</dd>
+                    <dt>Basada en</dt>
+                    <dd>Los cómics de Stan Lee y Steve Ditko</dd>
+                    <dt>Producción</dt>
+                    <dd>Laura Ziskin y Avi Arad</dd>
+                    <dt>Música</dt>
+                    <dd>Danny Elfman</dd>
+                    <dt>Fotografía</dt>
+                    <dd>Bill Pope</dd>
+                    <dt>Montaje</dt>
+                    <dd>Bob Murawski</dd>
+                    <dt>Estudio</dt>
+                    <dd>Columbia Pictures y Marvel Enterprises</dd>
+                    <dt>Estreno en EE. UU.</dt>
+                    <dd><time datetime="2004-06-30">30 de junio de 2004</time></dd>
+                    <dt>Duración</dt>
+                    <dd>127 minutos</dd>
+                    <dt>Presupuesto</dt>
+                    <dd>Unos 200 millones de dólares</dd>
+                    <dt>Recaudación</dt>
+                    <dd>Unos 789 millones de dólares en todo el mundo</dd>
+                </dl>
+            </section>
+        </div>
+
+        <section class="seccion" aria-labelledby="titulo-trama">
+            <h2 id="titulo-trama">Trama</h2>
+            <p>Dos años después de convertirse en Spider-Man, Peter no puede con todo: lo echan de su trabajo de repartidor de pizzas, se atrasa en la universidad, no le alcanza el dinero para el alquiler y ve cómo Mary Jane se compromete con otro. Agotado, empieza a perder sus poderes.</p>
+            <p>Mientras tanto, el científico Otto Octavius, a quien Peter admira, presenta un experimento de fusión nuclear que sale terriblemente mal. El accidente mata a su esposa y fusiona a su cuerpo los brazos mecánicos que usaba para controlar el reactor. Con su inteligencia artificial dañada, los brazos lo empujan a obsesionarse con terminar el experimento a cualquier costo: nace el Doctor Octopus.</p>
+            <p>Peter decide abandonar su identidad secreta y llevar una vida normal. Pero cuando la ciudad vuelve a estar en peligro y Mary Jane es secuestrada, tiene que elegir otra vez entre su felicidad y su responsabilidad.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-elenco">
+            <h2 id="titulo-elenco">Elenco principal</h2>
+            <div class="tabla-contenedor" role="region" aria-labelledby="titulo-tabla-elenco" tabindex="0">
+                <table class="tabla">
+                    <caption id="titulo-tabla-elenco">Actores y personajes de Spider-Man 2 (2004)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Actor o actriz</th>
+                            <th scope="col">Personaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Tobey Maguire</th><td>Peter Parker / Spider-Man</td></tr>
+                        <tr><th scope="row">Kirsten Dunst</th><td>Mary Jane Watson</td></tr>
+                        <tr><th scope="row">James Franco</th><td>Harry Osborn</td></tr>
+                        <tr><th scope="row">Alfred Molina</th><td>Otto Octavius / Doctor Octopus</td></tr>
+                        <tr><th scope="row">Rosemary Harris</th><td>May Parker</td></tr>
+                        <tr><th scope="row">J. K. Simmons</th><td>J. Jonah Jameson</td></tr>
+                        <tr><th scope="row">Donna Murphy</th><td>Rosalie Octavius</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-analisis">
+            <h2 id="titulo-analisis">Análisis</h2>
+            <p><em>Spider-Man 2</em> toma la idea central del personaje, que ser un héroe implica sacrificios, y la convierte en el corazón de la película. Peter no pelea solo contra un villano: pelea contra el cansancio, la culpa y las ganas de vivir como cualquier otro.</p>
+            <p>El Doctor Octopus de Alfred Molina es uno de los mejores villanos del género porque no es malo: es un hombre brillante que perdió todo y al que sus propias máquinas controlan. Su redención final cierra un arco que se siente ganado.</p>
+            <p>La escena del tren es el gran momento de la saga. Spider-Man detiene el vagón con su cuerpo, queda inconsciente y sin máscara, y los pasajeros lo rescatan, le prometen guardar su secreto y se paran frente al Doctor Octopus para protegerlo. Es la película diciendo, sin palabras, que el héroe también necesita que lo cuiden.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-recepcion">
+            <h2 id="titulo-recepcion">Recepción y premios</h2>
+            <ul class="lista-contenido">
+                <li>Ganó el Óscar a los mejores efectos visuales y estuvo nominada a mejor mezcla de sonido y mejor edición de sonido.</li>
+                <li>Fue la película mejor recibida por la crítica de las tres: tiene un 93 % de aprobación en Rotten Tomatoes.</li>
+                <li>Suele aparecer en los rankings de las mejores películas de superhéroes de la historia.</li>
+            </ul>
+        </section>
+
+        <!-- Galería: cada miniatura enlaza a la imagen grande; la fase de JS le suma un lightbox -->
+        <section class="seccion" aria-labelledby="titulo-galeria">
+            <h2 id="titulo-galeria">Galería de escenas</h2>
+            <ul class="galeria">
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2-2004-reactor.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2-2004-reactor-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Spider-Man frente al reactor de fusión de Octavius, que brilla como un pequeño sol entre maquinaria destrozada">
+                        </a>
+                        <figcaption>El reactor de fusión, el sueño que se convierte en amenaza.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2-2004-tren.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2-2004-tren-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Spider-Man y el Doctor Octopus, sostenido por sus brazos mecánicos, se enfrentan sobre el techo de un tren elevado">
+                        </a>
+                        <figcaption>La pelea sobre el tren, el gran momento de la saga.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2-2004-boda.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2-2004-boda-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Mary Jane, sonriente y con un vestido de novia, corre por una plaza con una fuente de fondo">
+                        </a>
+                        <figcaption>Mary Jane toma su propia decisión.</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
