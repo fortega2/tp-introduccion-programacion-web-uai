@@ -114,14 +114,97 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Legado e influencia</h1>
-        <p>Antes de que existieran los grandes universos cinematográficos, la trilogía de Raimi demostró que una película de superhéroes podía ser un éxito masivo y, al mismo tiempo, una historia emotiva y personal.</p>
-        <p>Acá analizamos qué dejó en el género, cómo se compara con las versiones posteriores de Spider-Man y por qué sigue tan presente para los fans.</p>
+        <p class="entradilla">Antes de que existieran los grandes universos cinematográficos, la trilogía de Raimi demostró que una película de superhéroes podía ser un éxito masivo y, al mismo tiempo, una historia emotiva y personal.</p>
+
+        <section class="seccion" aria-labelledby="titulo-genero">
+            <h2 id="titulo-genero">Lo que cambió en el género</h2>
+            <p>En 2002, las películas de superhéroes todavía eran una apuesta. <em>Spider-Man</em> fue la primera en superar los 100 millones de dólares en su primer fin de semana y, junto con <em>X-Men</em> (2000), convenció a los estudios de que los cómics podían sostener grandes franquicias.</p>
+            <p>Pero su influencia va más allá de la taquilla. La trilogía instaló ideas que el género repite hasta hoy:</p>
+            <ul class="lista-contenido">
+                <li>Contar el origen del héroe con tiempo, dejando que el público lo conozca antes de verlo en acción.</li>
+                <li>Villanos con motivos comprensibles, que podrían haber sido buenas personas.</li>
+                <li>Un protagonista con problemas cotidianos: pagar el alquiler, llegar a horario, sostener una relación.</li>
+                <li>Escenas de acción construidas alrededor de una decisión moral, como el puente o el tren.</li>
+            </ul>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-comparacion">
+            <h2 id="titulo-comparacion">Tres Spider-Man, tres miradas</h2>
+            <p>Después de Tobey Maguire, el personaje tuvo dos nuevas versiones en el cine. Cada una refleja una época distinta.</p>
+            <div class="tabla-contenedor" role="region" aria-labelledby="titulo-tabla-comparacion" tabindex="0">
+                <table class="tabla">
+                    <caption id="titulo-tabla-comparacion">Comparación entre los tres actores que protagonizaron Spider-Man en el cine</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Actor</th>
+                            <th scope="col">Años</th>
+                            <th scope="col" class="numero">Películas propias</th>
+                            <th scope="col" class="numero">Recaudación mundial</th>
+                            <th scope="col">Tono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Tobey Maguire</th>
+                            <td>2002–2007</td>
+                            <td class="numero">3</td>
+                            <td class="numero">2509 millones</td>
+                            <td>Clásico y sincero, cercano al melodrama.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Andrew Garfield</th>
+                            <td>2012–2014</td>
+                            <td class="numero">2</td>
+                            <td class="numero">1467 millones</td>
+                            <td>Más moderno y romántico, con un Peter rebelde y ocurrente.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tom Holland</th>
+                            <td>2017–2021</td>
+                            <td class="numero">3</td>
+                            <td class="numero">3918 millones</td>
+                            <td>Adolescente y liviano, parte del Universo Cinematográfico de Marvel.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="tabla__nota" colspan="5">Montos en dólares, aproximados y sin ajustar por inflación. Para Holland se cuentan sus tres películas propias hasta <cite>No Way Home</cite> (2021), sin sus apariciones en otras películas de Marvel.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-regreso">
+            <h2 id="titulo-regreso">El regreso en <cite>No Way Home</cite></h2>
+            <figure class="figura">
+                <img src="images/legado/tres-spider-man.webp"
+                     srcset="images/legado/tres-spider-man-640.webp 640w, images/legado/tres-spider-man.webp 1280w"
+                     sizes="(min-width: 72rem) 42rem, 100vw"
+                     width="1280" height="720" loading="lazy"
+                     alt="Los tres Spider-Man, cada uno con su traje, saltan juntos al ataque en un escenario oscuro">
+                <figcaption>Los tres Spider-Man juntos en <cite>Spider-Man: No Way Home</cite> (2021).</figcaption>
+            </figure>
+            <p>En 2021, catorce años después de <em>Spider-Man 3</em>, Tobey Maguire volvió a ponerse el traje en <em>Spider-Man: No Way Home</em>, junto a Andrew Garfield y Tom Holland. Con él regresaron también Willem Dafoe como el Duende Verde, Alfred Molina como el Doctor Octopus y Thomas Haden Church como el Hombre de Arena.</p>
+            <p>La reacción del público en los cines, con aplausos y gritos en cada aparición, mostró hasta qué punto la versión de Raimi seguía viva para varias generaciones. La película recaudó cerca de 1900 millones de dólares, la cifra más alta de toda la historia del personaje.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-memes">
+            <h2 id="titulo-memes">De la pantalla a los memes</h2>
+            <p>Pocas sagas generaron tantos memes como esta. Muchos nacieron de escenas que en su momento parecían exageradas y que hoy los fans celebran como parte del encanto de la trilogía:</p>
+            <ul class="lista-contenido">
+                <li>El Peter "malo" de <em>Spider-Man 3</em>, peinado hacia adelante y bailando por la calle.</li>
+                <li>La carcajada de J. Jonah Jameson, un personaje tan querido que J. K. Simmons volvió a interpretarlo en las películas de Tom Holland.</li>
+                <li>"¡Es hora de la pizza!", el grito de Peter repartiendo pizzas en <em>Spider-Man 2</em>.</li>
+                <li>"Yo también soy algo así como un científico", la frase de Norman Osborn en la primera película.</li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
