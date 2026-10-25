@@ -137,14 +137,110 @@
 
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
-        <h1>Spider-Man: la trilogía de Sam Raimi</h1>
-        <p>Entre 2002 y 2007, Sam Raimi y Tobey Maguire llevaron a Peter Parker al cine en tres películas que cambiaron para siempre el género de superhéroes. Este sitio recorre cada una de ellas: sus historias, sus personajes, sus villanos y todo lo que dejaron detrás.</p>
+        <!-- Presentación del sitio sobre una escena de la primera película -->
+        <section class="hero" aria-labelledby="titulo-principal">
+            <img class="hero__imagen" src="images/peliculas/spider-man-2002-agazapado.webp"
+                 srcset="images/peliculas/spider-man-2002-agazapado-640.webp 640w, images/peliculas/spider-man-2002-agazapado.webp 1280w"
+                 sizes="(min-width: 72rem) 72rem, 100vw"
+                 width="1280" height="720" fetchpriority="high"
+                 alt="Spider-Man agazapado sobre el asfalto de una calle de Nueva York, de noche y entre autos estacionados">
+            <div class="hero__texto">
+                <h1 id="titulo-principal">Spider-Man: la trilogía de Sam Raimi</h1>
+                <p>Tres películas, un héroe que nunca dejó de ser un chico de Queens y una saga que cambió para siempre el cine de superhéroes.</p>
+                <a class="boton-accion" href="sobre-la-trilogia.html">Conocé la historia de la trilogía</a>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-bienvenida">
+            <h2 id="titulo-bienvenida">Un homenaje a la trilogía original</h2>
+            <p class="entradilla">Entre 2002 y 2007, Sam Raimi y Tobey Maguire llevaron a Peter Parker al cine en tres películas que, mucho antes de los grandes universos cinematográficos, demostraron que una historia de superhéroes podía emocionar tanto como entretener.</p>
+            <p>En este sitio repasamos cada una de las películas, sus personajes y sus villanos, ordenamos los hechos de la saga en una línea de tiempo, juntamos las mejores curiosidades de la producción y analizamos el legado que dejó en el género. Si sos fan desde siempre o recién la estás descubriendo, este es tu lugar.</p>
+        </section>
+
+        <!-- Accesos rápidos a las tres películas -->
+        <section class="seccion" aria-labelledby="titulo-peliculas">
+            <h2 id="titulo-peliculas">Las tres películas</h2>
+            <ul class="grilla-tarjetas grilla-tarjetas--posters">
+                <li>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="images/peliculas/spider-man-2002-poster.webp" width="500" height="750" loading="lazy"
+                             alt="Póster de Spider-Man: el héroe trepa por la fachada vidriada de un edificio, que refleja su figura">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="spider-man-2002.html">Spider-Man</a></h3>
+                            <p class="tarjeta__dato">2002 · Contra el Duende Verde</p>
+                            <p>Peter Parker recibe sus poderes y aprende, de la peor manera, lo que significa la responsabilidad.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="images/peliculas/spider-man-2-2004-poster.webp" width="500" height="750" loading="lazy"
+                             alt="Póster de Spider-Man 2: el héroe abraza a Mary Jane en lo alto de la ciudad, al atardecer">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="spider-man-2-2004.html">Spider-Man 2</a></h3>
+                            <p class="tarjeta__dato">2004 · Contra el Doctor Octopus</p>
+                            <p>El costo de una doble vida pone en duda si Peter quiere seguir siendo un héroe.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <img class="tarjeta__imagen" src="images/peliculas/spider-man-3-2007-poster.webp" width="500" height="750" loading="lazy"
+                             alt="Póster de Spider-Man 3: el héroe con el traje negro del simbionte trepa un rascacielos, reflejado en el vidrio con su traje rojo">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="spider-man-3-2007.html">Spider-Man 3</a></h3>
+                            <p class="tarjeta__dato">2007 · Contra el Hombre de Arena, Venom y el Nuevo Duende</p>
+                            <p>Un traje alienígena saca a la luz el lado más oscuro de Peter.</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Accesos a las demás secciones del sitio -->
+        <section class="seccion" aria-labelledby="titulo-explora">
+            <h2 id="titulo-explora">Seguí explorando</h2>
+            <ul class="grilla-tarjetas">
+                <li>
+                    <article class="tarjeta">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="personajes.html">Personajes</a></h3>
+                            <p>Peter, Mary Jane, Harry, la tía May y quienes los rodean.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="villanos.html">Villanos</a></h3>
+                            <p>Cinco enemigos que, casi siempre, empezaron siendo buenas personas.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="linea-de-tiempo.html">Línea de tiempo</a></h3>
+                            <p>Los momentos clave de la saga, en orden.</p>
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article class="tarjeta">
+                        <div class="tarjeta__cuerpo">
+                            <h3><a class="tarjeta__enlace" href="curiosidades.html">Curiosidades</a></h3>
+                            <p>Anécdotas de rodaje, cameos y datos de producción.</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
