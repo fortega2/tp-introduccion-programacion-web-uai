@@ -446,6 +446,12 @@ main:focus {
     color: var(--color-texto-suave);
 }
 
+/* Notas al pie de una sección (fuentes, aclaraciones) */
+.nota {
+    color: var(--color-texto-suave);
+    font-size: var(--texto-chico);
+}
+
 /* Listas de contenido con el mismo ancho de lectura que los párrafos */
 .lista-contenido {
     max-width: var(--ancho-lectura);
@@ -643,8 +649,10 @@ main:focus {
     overflow-x: auto;
 }
 
+/* El ancho mínimo evita columnas apretadas: en mobile la tabla se desplaza */
 .tabla {
     width: 100%;
+    min-width: 36rem;
     border-collapse: collapse;
     background-color: var(--color-superficie);
 }
