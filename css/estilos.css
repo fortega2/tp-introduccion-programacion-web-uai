@@ -702,8 +702,9 @@ main:focus {
     font-variant-numeric: tabular-nums;
 }
 
-/* Figuras con su epígrafe */
+/* Figuras con su epígrafe: con el mismo ancho máximo que el texto */
 .figura {
+    max-width: var(--ancho-lectura);
     margin: 0 0 var(--espacio-l);
 }
 
