@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <link rel="stylesheet" href="css/blog.css">
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -114,14 +118,82 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Blog y opiniones</h1>
-        <p>¿Cuál es la mejor de las tres? ¿Qué escena envejeció mejor? ¿Merece Spider-Man 3 una segunda oportunidad? En este espacio publicamos reseñas, rankings y artículos de opinión sobre la saga.</p>
+        <p class="entradilla">¿Cuál es la mejor de las tres? ¿Qué escena envejeció mejor? ¿Merece <em>Spider-Man 3</em> una segunda oportunidad? En este espacio publicamos reseñas, rankings y artículos de opinión sobre la saga.</p>
         <p>Podés filtrar las entradas por categoría para encontrar lo que más te interese.</p>
+
+        <!-- Cada entrada indica su categoría en data-categoria: el filtro del blog la usa -->
+        <ul class="entradas">
+            <li>
+                <article class="entrada" data-categoria="ranking">
+                    <h2>Las tres películas, de menor a mayor</h2>
+                    <p class="entrada__meta">
+                        <span class="entrada__categoria">Ranking</span>
+                        <time datetime="2026-10-20">20 de octubre de 2026</time>
+                        <span>Por Facundo Ernesto Ortega</span>
+                    </p>
+                    <p>Ordenar las películas de la trilogía es casi un deporte entre fans. Este es nuestro ranking, con una aclaración: ninguna de las tres es mala.</p>
+                    <ol class="lista-contenido">
+                        <li><strong>Tercer puesto: <a href="spider-man-3-2007.html">Spider-Man 3</a>.</strong> Tiene grandes momentos, como el nacimiento del Hombre de Arena, pero quiere contar demasiadas historias a la vez.</li>
+                        <li><strong>Segundo puesto: <a href="spider-man-2002.html">Spider-Man</a>.</strong> Un origen contado con paciencia y un villano memorable. Es la película que hizo posible todo lo demás.</li>
+                        <li><strong>Primer puesto: <a href="spider-man-2-2004.html">Spider-Man 2</a>.</strong> El equilibrio perfecto entre acción, drama y humor, con el mejor villano de la saga.</li>
+                    </ol>
+                </article>
+            </li>
+            <li>
+                <article class="entrada" data-categoria="resena">
+                    <h2>Spider-Man 2: el héroe cansado</h2>
+                    <p class="entrada__meta">
+                        <span class="entrada__categoria">Reseña</span>
+                        <time datetime="2026-10-12">12 de octubre de 2026</time>
+                        <span>Por Facundo Ernesto Ortega</span>
+                    </p>
+                    <p>Pocas películas de superhéroes se animan a mostrar a su protagonista agotado. <em>Spider-Man 2</em> lo hace desde la primera escena: Peter llega tarde a todo, no le alcanza la plata y siente que le está fallando a todos los que quiere.</p>
+                    <p>Ese cansancio es lo que hace que su decisión final pese tanto. Cuando vuelve a ponerse el traje, no es porque sea fácil, sino porque entiende que alguien tiene que hacerlo. Sumale a Alfred Molina en el mejor papel de su carrera y una escena del tren que todavía emociona, y el resultado es, para nosotros, la mejor película de la saga.</p>
+                </article>
+            </li>
+            <li>
+                <article class="entrada" data-categoria="opinion">
+                    <h2>La escena del tren, más de veinte años después</h2>
+                    <p class="entrada__meta">
+                        <span class="entrada__categoria">Opinión</span>
+                        <time datetime="2026-09-28">28 de septiembre de 2026</time>
+                        <span>Por Facundo Ernesto Ortega</span>
+                    </p>
+                    <p>Hay escenas de acción que se recuerdan por sus efectos y otras que se recuerdan por lo que significan. La del tren pertenece al segundo grupo.</p>
+                    <p>Spider-Man frena el vagón hasta quedar desmayado, y los pasajeros lo sostienen entre todos, como en una pintura. Cuando ven su cara, descubren que es "apenas un chico". Y cuando aparece el Doctor Octopus, se ponen delante para defenderlo. En apenas unos minutos, la película resume toda su idea: el héroe protege a la ciudad, pero la ciudad también lo protege a él.</p>
+                </article>
+            </li>
+            <li>
+                <article class="entrada" data-categoria="resena">
+                    <h2>Spider-Man (2002): el origen que marcó a una generación</h2>
+                    <p class="entrada__meta">
+                        <span class="entrada__categoria">Reseña</span>
+                        <time datetime="2026-09-15">15 de septiembre de 2026</time>
+                        <span>Por Facundo Ernesto Ortega</span>
+                    </p>
+                    <p>Vista hoy, la primera película tiene detalles que delatan su edad: algunos efectos digitales y un tono a veces ingenuo. Pero su corazón sigue intacto.</p>
+                    <p>Raimi entendió que lo importante no era el traje, sino el chico que lo usa. Por eso dedica casi una hora a Peter antes de mostrar a Spider-Man en acción, y por eso la muerte del tío Ben duele tanto. Willem Dafoe, por su parte, construye un villano tan perturbador como carismático. Es una película que sentó las bases del género tal como lo conocemos.</p>
+                </article>
+            </li>
+            <li>
+                <article class="entrada" data-categoria="opinion">
+                    <h2>En defensa de Spider-Man 3</h2>
+                    <p class="entrada__meta">
+                        <span class="entrada__categoria">Opinión</span>
+                        <time datetime="2026-09-01">1 de septiembre de 2026</time>
+                        <span>Por Facundo Ernesto Ortega</span>
+                    </p>
+                    <p>Durante años fue "la mala" de la trilogía. Y es cierto que tiene problemas: demasiados villanos, un Venom que llega tarde y algunas casualidades difíciles de creer.</p>
+                    <p>Pero también tiene una idea valiente: mostrar que el héroe puede volverse arrogante y cruel, y que lo más difícil no es vencer al enemigo sino perdonarlo. La despedida entre Peter y Flint Marko es uno de los momentos más maduros de la saga. Y sí: el baile del Peter "malo" es ridículo a propósito.</p>
+                </article>
+            </li>
+        </ul>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
