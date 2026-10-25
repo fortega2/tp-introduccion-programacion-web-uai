@@ -54,3 +54,9 @@ Y abrir <http://localhost:8000/>. No conviene abrir los archivos con `file://`, 
 ## Publicación y rendimiento
 
 El sitio se sirve con [Caddy](https://caddyserver.com/), que tiene HTTPS automático y comprime cada respuesta con gzip o zstd. Esa compresión cubre el criterio de CSS y JS comprimidos. Por eso los fuentes del repositorio quedan legibles y comentados, sin minificar.
+
+## Fuentes
+
+- **Imágenes de las películas** (pósters, escenas y retratos de personajes): [The Movie Database (TMDB)](https://www.themoviedb.org/), en las páginas de imágenes de *Spider-Man* (2002), *Spider-Man 2* (2004), *Spider-Man 3* (2007) y *Spider-Man: No Way Home* (2021). Se recortaron y se convirtieron a WebP con ImageMagick.
+- **Logo, favicon e imagen para compartir:** diseño propio (una telaraña en SVG).
+- **Datos** (fichas técnicas, fechas, presupuestos y recaudaciones): [Wikipedia](https://es.wikipedia.org/wiki/Trilog%C3%ADa_de_Spider-Man) y [Box Office Mojo](https://www.boxofficemojo.com/). Como las fuentes no coinciden al millón, los montos están redondeados.
