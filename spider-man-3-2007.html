@@ -56,6 +56,35 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <!-- Datos estructurados (Schema.org) de la película: bloque de datos JSON, no código -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Movie",
+        "name": "Spider-Man 3",
+        "datePublished": "2007-05-04",
+        "duration": "PT139M",
+        "image": "https://spiderman-trilogia.sonuserver.com/images/peliculas/spider-man-3-2007-poster.webp",
+        "director": { "@type": "Person", "name": "Sam Raimi" },
+        "author": [
+            { "@type": "Person", "name": "Sam Raimi" },
+            { "@type": "Person", "name": "Ivan Raimi" },
+            { "@type": "Person", "name": "Alvin Sargent" }
+        ],
+        "musicBy": { "@type": "Person", "name": "Christopher Young" },
+        "productionCompany": { "@type": "Organization", "name": "Columbia Pictures" },
+        "actor": [
+            { "@type": "Person", "name": "Tobey Maguire" },
+            { "@type": "Person", "name": "Kirsten Dunst" },
+            { "@type": "Person", "name": "James Franco" },
+            { "@type": "Person", "name": "Thomas Haden Church" },
+            { "@type": "Person", "name": "Topher Grace" }
+        ]
+    }
+    </script>
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -114,14 +143,133 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Spider-Man 3 (2007)</h1>
-        <p>Peter por fin parece tener todo bajo control, hasta que un simbionte alienígena saca a la luz su lado más oscuro. Al mismo tiempo, el Hombre de Arena, Venom y un Harry Osborn decidido a vengarse ponen a prueba todo lo que aprendió.</p>
-        <p>El cierre de la trilogía fue la película más ambiciosa y también la más discutida. Acá repasamos su ficha técnica, su trama y un análisis de sus aciertos y sus problemas.</p>
+        <p class="entradilla">El cierre de la trilogía: un traje alienígena, tres villanos y un Peter Parker que, por primera vez, se deja llevar por su lado más oscuro.</p>
+
+        <!-- Póster y ficha técnica -->
+        <div class="pelicula-cabecera">
+            <img class="pelicula-cabecera__poster" src="images/peliculas/spider-man-3-2007-poster.webp" width="500" height="750"
+                 alt="Póster de Spider-Man 3: el héroe con el traje negro del simbionte trepa un rascacielos, reflejado en el vidrio con su traje rojo">
+            <section aria-labelledby="titulo-ficha">
+                <h2 id="titulo-ficha">Ficha técnica</h2>
+                <dl class="ficha-tecnica">
+                    <dt>Dirección</dt>
+                    <dd>Sam Raimi</dd>
+                    <dt>Guion</dt>
+                    <dd>Sam Raimi, Ivan Raimi y Alvin Sargent</dd>
+                    <dt>Historia</dt>
+                    <dd>Sam Raimi e Ivan Raimi</dd>
+                    <dt>Basada en</dt>
+                    <dd>Los cómics de Stan Lee y Steve Ditko</dd>
+                    <dt>Producción</dt>
+                    <dd>Laura Ziskin, Avi Arad y Grant Curtis</dd>
+                    <dt>Música</dt>
+                    <dd>Christopher Young</dd>
+                    <dt>Fotografía</dt>
+                    <dd>Bill Pope</dd>
+                    <dt>Montaje</dt>
+                    <dd>Bob Murawski</dd>
+                    <dt>Estudio</dt>
+                    <dd>Columbia Pictures y Marvel Studios</dd>
+                    <dt>Estreno en EE. UU.</dt>
+                    <dd><time datetime="2007-05-04">4 de mayo de 2007</time></dd>
+                    <dt>Duración</dt>
+                    <dd>139 minutos</dd>
+                    <dt>Presupuesto</dt>
+                    <dd>Unos 258 millones de dólares</dd>
+                    <dt>Recaudación</dt>
+                    <dd>Unos 895 millones de dólares en todo el mundo</dd>
+                </dl>
+            </section>
+        </div>
+
+        <section class="seccion" aria-labelledby="titulo-trama">
+            <h2 id="titulo-trama">Trama</h2>
+            <p>Peter por fin parece tener la vida ordenada: Nueva York ama a Spider-Man, le va bien en la universidad y planea pedirle casamiento a Mary Jane. Pero el éxito se le sube a la cabeza, justo cuando la carrera de ella empieza a tambalear.</p>
+            <p>Al mismo tiempo, todo se complica. Harry, convencido de que Spider-Man mató a su padre, retoma el legado del Duende Verde. Flint Marko, un preso fugado, cae en un experimento científico que lo convierte en el Hombre de Arena, y Peter se entera de que fue él quien realmente mató al tío Ben. Y una sustancia alienígena se adhiere a su traje: el simbionte negro, que aumenta sus poderes pero también su rencor y su arrogancia.</p>
+            <p>Cuando Peter logra desprenderse del traje, el simbionte encuentra un nuevo huésped en Eddie Brock, un fotógrafo rival que lo odia, y nace Venom. Para salvar a Mary Jane, Peter va a necesitar algo que no esperaba: la ayuda de su viejo amigo.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-elenco">
+            <h2 id="titulo-elenco">Elenco principal</h2>
+            <div class="tabla-contenedor" role="region" aria-labelledby="titulo-tabla-elenco" tabindex="0">
+                <table class="tabla">
+                    <caption id="titulo-tabla-elenco">Actores y personajes de Spider-Man 3 (2007)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Actor o actriz</th>
+                            <th scope="col">Personaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Tobey Maguire</th><td>Peter Parker / Spider-Man</td></tr>
+                        <tr><th scope="row">Kirsten Dunst</th><td>Mary Jane Watson</td></tr>
+                        <tr><th scope="row">James Franco</th><td>Harry Osborn / Nuevo Duende</td></tr>
+                        <tr><th scope="row">Thomas Haden Church</th><td>Flint Marko / Hombre de Arena</td></tr>
+                        <tr><th scope="row">Topher Grace</th><td>Eddie Brock / Venom</td></tr>
+                        <tr><th scope="row">Bryce Dallas Howard</th><td>Gwen Stacy</td></tr>
+                        <tr><th scope="row">James Cromwell</th><td>Capitán George Stacy</td></tr>
+                        <tr><th scope="row">Rosemary Harris</th><td>May Parker</td></tr>
+                        <tr><th scope="row">J. K. Simmons</th><td>J. Jonah Jameson</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-analisis">
+            <h2 id="titulo-analisis">Análisis</h2>
+            <p><em>Spider-Man 3</em> tiene una idea muy buena en el centro: un héroe que, a fuerza de éxito, se vuelve vanidoso y vengativo, y que tiene que aprender a perdonar. La historia del Hombre de Arena, un padre desesperado que nunca quiso matar a nadie, es la más emotiva de la película.</p>
+            <p>El problema es la cantidad. Tres villanos, un triángulo amoroso, la venganza de Harry y la llegada de Gwen Stacy compiten por el mismo tiempo, y varias historias quedan a medio desarrollar. Venom, el personaje más esperado por los fans, aparece recién en el último tramo, y es que Raimi no lo tenía en sus planes: lo sumó a pedido del productor Avi Arad.</p>
+            <p>Con el tiempo, la película fue revalorizada. Escenas que en su momento se criticaron, como el Peter "malo" bailando por la calle, se volvieron memes muy queridos, y muchos fans ven hoy en ellas el humor y la autoparodia típicos de Raimi.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-recepcion">
+            <h2 id="titulo-recepcion">Recepción y premios</h2>
+            <ul class="lista-contenido">
+                <li>Fue la película más taquillera de la trilogía y tuvo el mayor estreno de la historia hasta ese momento en Estados Unidos.</li>
+                <li>Con un presupuesto estimado de 258 millones de dólares, fue la película más cara jamás filmada al momento de su estreno.</li>
+                <li>La crítica la recibió con opiniones divididas: tiene un 62 % de aprobación en Rotten Tomatoes, muy por debajo de sus antecesoras.</li>
+            </ul>
+        </section>
+
+        <!-- Galería: cada miniatura enlaza a la imagen grande; la fase de JS le suma un lightbox -->
+        <section class="seccion" aria-labelledby="titulo-galeria">
+            <h2 id="titulo-galeria">Galería de escenas</h2>
+            <ul class="galeria">
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-3-2007-hombre-de-arena.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-3-2007-hombre-de-arena-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Un cuerpo hecho de arena intenta levantarse del suelo con esfuerzo, apoyándose en una mano">
+                        </a>
+                        <figcaption>El nacimiento del Hombre de Arena, una de las secuencias más elogiadas de la película.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-3-2007-traje-negro.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-3-2007-traje-negro-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Peter, sin máscara y con el traje negro del simbionte, extiende la mano hacia adelante con mirada desafiante">
+                        </a>
+                        <figcaption>El traje negro saca a la luz el lado más oscuro de Peter.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-3-2007-mary-jane-telarana.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-3-2007-mary-jane-telarana-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Mary Jane, atrapada en una enorme telaraña negra, mira hacia abajo con miedo">
+                        </a>
+                        <figcaption>Mary Jane, rehén de Venom y del Hombre de Arena en el desenlace.</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
