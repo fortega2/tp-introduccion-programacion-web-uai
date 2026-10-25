@@ -56,6 +56,10 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <link rel="stylesheet" href="css/linea-de-tiempo.css">
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -114,14 +118,123 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Línea de tiempo</h1>
-        <p>Tres películas, cinco años en la vida de Peter Parker. Esta cronología ordena los momentos clave de la saga, desde la excursión escolar en la que todo empezó hasta la última batalla en Nueva York.</p>
-        <p>Cada evento se puede desplegar para ver más detalles.</p>
+        <p class="entradilla">Tres películas, varios años en la vida de Peter Parker. Esta cronología ordena los momentos clave de la saga, desde la excursión escolar en la que todo empezó hasta la última batalla en Nueva York.</p>
+        <p>Cada evento se puede desplegar para ver más detalles. Atención: la cronología cuenta la historia completa, con sus finales.</p>
+
+        <!-- Cada evento tiene un título (h3) y un detalle; el script de la línea de tiempo los convierte en acordeón -->
+        <section class="seccion" aria-labelledby="titulo-2002">
+            <h2 id="titulo-2002">Spider-Man (2002)</h2>
+            <ol class="linea-tiempo">
+                <li class="evento">
+                    <h3>La picadura</h3>
+                    <div class="evento__detalle">
+                        <p>Durante una excursión escolar a un laboratorio de genética, una araña modificada pica a Peter en la mano. Esa misma noche cae enfermo y despierta con un cuerpo distinto.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>Nace el Duende Verde</h3>
+                    <div class="evento__detalle">
+                        <p>Presionado para no perder un contrato militar, Norman Osborn prueba en sí mismo un suero experimental. Gana una fuerza enorme, pero también una segunda personalidad violenta.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>Un gran poder</h3>
+                    <div class="evento__detalle">
+                        <p>Peter usa sus poderes para ganar dinero en un torneo de lucha libre. Al salir deja escapar a un ladrón que, minutos después, mata al tío Ben. Movido por la culpa, decide convertirse en Spider-Man.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>La elección en el puente</h3>
+                    <div class="evento__detalle">
+                        <p>El Duende Verde obliga a Spider-Man a elegir entre salvar a Mary Jane o a un teleférico lleno de chicos. Con la ayuda de los neoyorquinos que le arrojan objetos al villano, logra salvar a todos.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>La muerte de Norman</h3>
+                    <div class="evento__detalle">
+                        <p>Norman muere atravesado por su propio planeador. Harry, que no sabe la verdad, culpa a Spider-Man. En el funeral, Peter rechaza a Mary Jane para mantenerla a salvo.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-2004">
+            <h2 id="titulo-2004">Spider-Man 2 (2004)</h2>
+            <ol class="linea-tiempo">
+                <li class="evento">
+                    <h3>Una vida al límite</h3>
+                    <div class="evento__detalle">
+                        <p>Dos años después, Peter no da abasto: pierde trabajos, se atrasa en la universidad y se aleja de Mary Jane, que ahora es actriz y está comprometida con John Jameson.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>El accidente de Octavius</h3>
+                    <div class="evento__detalle">
+                        <p>La demostración del reactor de fusión de Otto Octavius sale mal. Su esposa muere y sus brazos mecánicos quedan fusionados a su cuerpo, controlando cada vez más sus decisiones.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>Spider-Man nunca más</h3>
+                    <div class="evento__detalle">
+                        <p>Agotado y sin poderes, Peter tira el traje a la basura y prueba vivir como cualquier otro. Su vida mejora, pero la ciudad empieza a extrañar a su héroe.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>La batalla del tren</h3>
+                    <div class="evento__detalle">
+                        <p>Con sus poderes recuperados, Spider-Man detiene con su cuerpo un tren sin frenos. Los pasajeros lo rescatan, ven su cara y prometen guardar el secreto, pero el Doctor Octopus lo captura y se lo entrega a Harry.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>El sacrificio de Octavius</h3>
+                    <div class="evento__detalle">
+                        <p>En el reactor, Peter convence a Octavius de recuperar el control. El científico hunde su máquina en el río y muere con ella. Mary Jane descubre la identidad de Peter y, el día de su boda, lo elige a él.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-2007">
+            <h2 id="titulo-2007">Spider-Man 3 (2007)</h2>
+            <ol class="linea-tiempo">
+                <li class="evento">
+                    <h3>Llega el simbionte</h3>
+                    <div class="evento__detalle">
+                        <p>Un pequeño meteorito cae cerca de Peter y Mary Jane en el parque. Sin que se den cuenta, una sustancia negra y viva se pega a la moto de Peter y lo sigue hasta su casa.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>Nace el Hombre de Arena</h3>
+                    <div class="evento__detalle">
+                        <p>Flint Marko, un preso fugado, cae en un experimento y su cuerpo se fusiona con la arena. La policía le revela a Peter que fue Marko, y no el ladrón que él dejó escapar, quien mató al tío Ben.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>El traje negro</h3>
+                    <div class="evento__detalle">
+                        <p>El simbionte cubre el traje de Spider-Man. Peter se vuelve más fuerte, pero también arrogante y vengativo: enfrenta a Marko con crueldad, lastima a Harry y a Mary Jane, y arruina la carrera de Eddie Brock.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>La campana y Venom</h3>
+                    <div class="evento__detalle">
+                        <p>En el campanario de una iglesia, Peter descubre que el sonido debilita al simbionte y logra arrancárselo. La criatura cae sobre Eddie Brock, que estaba rezando para que Peter muriera, y nace Venom.</p>
+                    </div>
+                </li>
+                <li class="evento">
+                    <h3>La última batalla</h3>
+                    <div class="evento__detalle">
+                        <p>Venom y el Hombre de Arena secuestran a Mary Jane. Harry se suma a Peter para rescatarla y muere protegiéndolo. Marko explica que la muerte de Ben fue un accidente, y Peter lo perdona.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
