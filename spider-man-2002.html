@@ -56,6 +56,30 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <!-- Datos estructurados (Schema.org) de la película: bloque de datos JSON, no código -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Movie",
+        "name": "Spider-Man",
+        "datePublished": "2002-05-03",
+        "duration": "PT121M",
+        "image": "https://spiderman-trilogia.sonuserver.com/images/peliculas/spider-man-2002-poster.webp",
+        "director": { "@type": "Person", "name": "Sam Raimi" },
+        "author": { "@type": "Person", "name": "David Koepp" },
+        "musicBy": { "@type": "Person", "name": "Danny Elfman" },
+        "productionCompany": { "@type": "Organization", "name": "Columbia Pictures" },
+        "actor": [
+            { "@type": "Person", "name": "Tobey Maguire" },
+            { "@type": "Person", "name": "Willem Dafoe" },
+            { "@type": "Person", "name": "Kirsten Dunst" },
+            { "@type": "Person", "name": "James Franco" }
+        ]
+    }
+    </script>
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -114,14 +138,129 @@
     <!-- ===== Contenido principal (propio de cada página) ===== -->
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Spider-Man (2002)</h1>
-        <p>La película que lo empezó todo. Peter Parker es un estudiante tímido de Queens hasta que la picadura de una araña modificada genéticamente le cambia la vida. Entre el descubrimiento de sus poderes, una pérdida que lo marca para siempre y la aparición del Duende Verde, aprende que un gran poder conlleva una gran responsabilidad.</p>
-        <p>Acá vas a encontrar su ficha técnica, un resumen de la trama y un análisis de lo que la hizo funcionar.</p>
+        <p class="entradilla">La película que lo empezó todo: el origen de Peter Parker, la pérdida que lo marca para siempre y su primer gran enemigo, el Duende Verde.</p>
+
+        <!-- Póster y ficha técnica -->
+        <div class="pelicula-cabecera">
+            <img class="pelicula-cabecera__poster" src="images/peliculas/spider-man-2002-poster.webp" width="500" height="750"
+                 alt="Póster de Spider-Man: el héroe trepa por la fachada vidriada de un edificio, que refleja su figura">
+            <section aria-labelledby="titulo-ficha">
+                <h2 id="titulo-ficha">Ficha técnica</h2>
+                <dl class="ficha-tecnica">
+                    <dt>Dirección</dt>
+                    <dd>Sam Raimi</dd>
+                    <dt>Guion</dt>
+                    <dd>David Koepp</dd>
+                    <dt>Basada en</dt>
+                    <dd>Los cómics de Stan Lee y Steve Ditko</dd>
+                    <dt>Producción</dt>
+                    <dd>Laura Ziskin e Ian Bryce</dd>
+                    <dt>Música</dt>
+                    <dd>Danny Elfman</dd>
+                    <dt>Fotografía</dt>
+                    <dd>Don Burgess</dd>
+                    <dt>Montaje</dt>
+                    <dd>Bob Murawski y Arthur Coburn</dd>
+                    <dt>Estudio</dt>
+                    <dd>Columbia Pictures y Marvel Enterprises</dd>
+                    <dt>Estreno en EE. UU.</dt>
+                    <dd><time datetime="2002-05-03">3 de mayo de 2002</time></dd>
+                    <dt>Duración</dt>
+                    <dd>121 minutos</dd>
+                    <dt>Presupuesto</dt>
+                    <dd>Unos 139 millones de dólares</dd>
+                    <dt>Recaudación</dt>
+                    <dd>Unos 825 millones de dólares en todo el mundo</dd>
+                </dl>
+            </section>
+        </div>
+
+        <section class="seccion" aria-labelledby="titulo-trama">
+            <h2 id="titulo-trama">Trama</h2>
+            <p>Peter Parker es un estudiante brillante y tímido que vive en Queens con sus tíos, Ben y May, y que está enamorado desde siempre de su vecina, Mary Jane Watson. Durante una visita escolar a un laboratorio, lo pica una araña modificada genéticamente y, a la mañana siguiente, descubre que ya no necesita anteojos, que puede trepar paredes y que de sus muñecas salen telarañas.</p>
+            <p>Al principio usa sus poderes para su propio beneficio. Pero cuando deja escapar a un ladrón que poco después mata al tío Ben, entiende el consejo que su tío le había dado: un gran poder conlleva una gran responsabilidad. Desde entonces se convierte en Spider-Man.</p>
+            <p>Mientras tanto, Norman Osborn, el padre de su mejor amigo Harry, prueba en sí mismo un suero experimental que le da una fuerza enorme y una segunda personalidad violenta: el Duende Verde. El enfrentamiento entre los dos termina obligando a Peter a elegir entre su vida personal y su deber como héroe.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-elenco">
+            <h2 id="titulo-elenco">Elenco principal</h2>
+            <div class="tabla-contenedor" role="region" aria-labelledby="titulo-tabla-elenco" tabindex="0">
+                <table class="tabla">
+                    <caption id="titulo-tabla-elenco">Actores y personajes de Spider-Man (2002)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Actor o actriz</th>
+                            <th scope="col">Personaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Tobey Maguire</th><td>Peter Parker / Spider-Man</td></tr>
+                        <tr><th scope="row">Willem Dafoe</th><td>Norman Osborn / Duende Verde</td></tr>
+                        <tr><th scope="row">Kirsten Dunst</th><td>Mary Jane Watson</td></tr>
+                        <tr><th scope="row">James Franco</th><td>Harry Osborn</td></tr>
+                        <tr><th scope="row">Cliff Robertson</th><td>Ben Parker</td></tr>
+                        <tr><th scope="row">Rosemary Harris</th><td>May Parker</td></tr>
+                        <tr><th scope="row">J. K. Simmons</th><td>J. Jonah Jameson</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-analisis">
+            <h2 id="titulo-analisis">Análisis</h2>
+            <p>Más que una película de acción, <em>Spider-Man</em> es una historia de crecimiento. Raimi se toma el tiempo de mostrar a Peter antes de los poderes y deja que el público lo acompañe mientras descubre lo que puede hacer, algo que hoy parece obvio pero que en 2002 no lo era.</p>
+            <p>El otro gran acierto es el villano. Willem Dafoe convierte a Norman Osborn en un hombre dividido, y la escena en la que discute consigo mismo frente al espejo se volvió una de las más recordadas del género. A cambio, el traje del Duende Verde, una armadura con máscara rígida, fue criticado por esconder la expresividad del actor.</p>
+            <p>El final, en el que Peter rechaza a Mary Jane para protegerla, rompe con el cierre feliz que se esperaba y deja planteado el conflicto que va a recorrer toda la trilogía.</p>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-recepcion">
+            <h2 id="titulo-recepcion">Recepción y premios</h2>
+            <ul class="lista-contenido">
+                <li>Fue la primera película de la historia en recaudar más de 100 millones de dólares en su primer fin de semana en Estados Unidos.</li>
+                <li>Terminó como la película más taquillera de 2002 en Estados Unidos y Canadá.</li>
+                <li>Recibió dos nominaciones al Óscar: mejor sonido y mejores efectos visuales.</li>
+            </ul>
+        </section>
+
+        <!-- Galería: cada miniatura enlaza a la imagen grande; la fase de JS le suma un lightbox -->
+        <section class="seccion" aria-labelledby="titulo-galeria">
+            <h2 id="titulo-galeria">Galería de escenas</h2>
+            <ul class="galeria">
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2002-picadura.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2002-picadura-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Primer plano de una araña roja y azul sobre el dorso de la mano de Peter">
+                        </a>
+                        <figcaption>La picadura que lo cambia todo.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2002-lucha-libre.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2002-lucha-libre-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Peter, con un disfraz rojo improvisado, camina hacia un ring de lucha libre donde lo espera su rival">
+                        </a>
+                        <figcaption>Peter prueba sus poderes en un torneo de lucha libre.</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="figura">
+                        <a class="galeria__enlace" href="images/peliculas/spider-man-2002-beso.webp" title="Ver la escena en tamaño grande">
+                            <img src="images/peliculas/spider-man-2002-beso-640.webp" width="640" height="360" loading="lazy"
+                                 alt="Mary Jane, bajo la lluvia, besa a Spider-Man, que cuelga cabeza abajo con la máscara levantada hasta la nariz">
+                        </a>
+                        <figcaption>El beso bajo la lluvia, una de las imágenes más famosas del cine de superhéroes.</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
