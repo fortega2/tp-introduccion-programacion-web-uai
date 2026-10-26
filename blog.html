@@ -58,6 +58,7 @@
 
     <!-- Recursos propios de esta página -->
     <link rel="stylesheet" href="css/blog.css">
+    <script src="js/filtros.js" defer></script>
     <!-- Fin de recursos propios -->
 
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
@@ -121,8 +122,26 @@
         <p class="entradilla">¿Cuál es la mejor de las tres? ¿Qué escena envejeció mejor? ¿Merece <em>Spider-Man 3</em> una segunda oportunidad? En este espacio publicamos reseñas, rankings y artículos de opinión sobre la saga.</p>
         <p>Podés filtrar las entradas por categoría para encontrar lo que más te interese.</p>
 
+        <!-- Filtros: solo funcionan con JavaScript, así que filtros.js los muestra -->
+        <form class="filtros" data-lista="lista-entradas" data-plural="entradas" aria-label="Filtrar entradas" hidden>
+            <fieldset class="filtros__grupo">
+                <legend>Categoría</legend>
+                <div class="filtros__opciones">
+                    <input type="radio" id="filtro-categoria-todas" name="categoria" value="todas" checked>
+                    <label for="filtro-categoria-todas">Todas</label>
+                    <input type="radio" id="filtro-categoria-resena" name="categoria" value="resena">
+                    <label for="filtro-categoria-resena">Reseña</label>
+                    <input type="radio" id="filtro-categoria-ranking" name="categoria" value="ranking">
+                    <label for="filtro-categoria-ranking">Ranking</label>
+                    <input type="radio" id="filtro-categoria-opinion" name="categoria" value="opinion">
+                    <label for="filtro-categoria-opinion">Opinión</label>
+                </div>
+            </fieldset>
+            <p class="filtros__estado" role="status"></p>
+        </form>
+
         <!-- Cada entrada indica su categoría en data-categoria: el filtro del blog la usa -->
-        <ul class="entradas">
+        <ul class="entradas" id="lista-entradas">
             <li>
                 <article class="entrada" data-categoria="ranking">
                     <h2>Las tres películas, de menor a mayor</h2>
@@ -193,7 +212,7 @@
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-26">26 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
