@@ -11,7 +11,7 @@
      8. Pie de página
      9. Botón volver arriba
     10. Componentes de contenido (secciones, tarjetas, tablas, fichas,
-        filtros, figuras, galería, citas, botones de acción)
+        filtros, figuras, galería y lightbox, citas, botones de acción)
     11. Pantallas medianas y escritorio (media queries)
    ========================================================================== */
 
@@ -833,6 +833,94 @@ main:focus {
 
 .galeria__enlace:hover img {
     transform: scale(1.04);
+}
+
+/* Lightbox de la galería (lo crea galeria.js): la escena ampliada en un
+   <dialog> modal, con colores fijos oscuros en los dos temas */
+.lightbox {
+    --color-foco: var(--color-amarillo);
+    width: min(64rem, 94vw);
+    max-width: none;
+    padding: 0;
+    overflow: visible;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    border: 0;
+    border-radius: var(--radio);
+}
+
+.lightbox::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox__figura {
+    margin: 0;
+}
+
+.lightbox__escena {
+    position: relative;
+}
+
+.lightbox__imagen {
+    width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: var(--radio) var(--radio) 0 0;
+}
+
+.lightbox__epigrafe {
+    padding: var(--espacio-s) var(--espacio-m) 0;
+}
+
+.lightbox__contador {
+    margin: 0;
+    padding: 0 var(--espacio-m) var(--espacio-s);
+    color: #c9d1e0;
+    font-size: var(--texto-chico);
+}
+
+/* Botones redondos sobre la escena: cerrar arriba a la derecha y
+   anterior/siguiente centrados a los costados */
+.lightbox__boton {
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    background-color: rgba(11, 15, 26, 0.85);
+    color: var(--color-blanco);
+    border: 0.125rem solid var(--color-blanco);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.lightbox__boton:hover {
+    background-color: var(--color-rojo);
+}
+
+.lightbox__boton[hidden] {
+    display: none;
+}
+
+.lightbox__boton--cerrar {
+    top: var(--espacio-s);
+    right: var(--espacio-s);
+}
+
+.lightbox__boton--anterior,
+.lightbox__boton--siguiente {
+    top: calc(50% - 1.375rem);
+}
+
+.lightbox__boton--anterior {
+    left: var(--espacio-s);
+}
+
+.lightbox__boton--siguiente {
+    right: var(--espacio-s);
 }
 
 /* Citas destacadas */
