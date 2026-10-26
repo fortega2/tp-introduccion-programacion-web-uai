@@ -39,3 +39,61 @@
 .evento__detalle p:last-child {
     margin-block-end: 0;
 }
+
+/* ---------- Acordeón (lo arma linea-de-tiempo.js) ---------- */
+
+/* Botón general para desplegar o plegar todos los eventos */
+.linea-tiempo__control {
+    margin-block-start: var(--espacio-s);
+    border: 0;
+    cursor: pointer;
+}
+
+.linea-tiempo__control[hidden] {
+    display: none;
+}
+
+/* El título del evento se vuelve un botón que ocupa todo el ancho
+   y conserva la tipografía del <h3> */
+.evento__boton {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-s);
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Con el botón el título es más alto: el punto de la línea baja
+   para quedar centrado con el texto */
+.evento:has(.evento__boton)::before {
+    top: 0.875rem;
+}
+
+.evento__boton:hover {
+    color: var(--color-enlace);
+}
+
+/* Flecha que indica el estado: apunta a la derecha cuando el evento
+   está plegado y gira hacia abajo cuando se despliega */
+.evento__boton::before {
+    content: "";
+    flex-shrink: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-right: 0.1875rem solid currentColor;
+    border-bottom: 0.1875rem solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform var(--transicion);
+}
+
+.evento__boton[aria-expanded="true"]::before {
+    transform: rotate(45deg);
+}

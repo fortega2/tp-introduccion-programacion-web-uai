@@ -58,6 +58,7 @@
 
     <!-- Recursos propios de esta página -->
     <link rel="stylesheet" href="css/linea-de-tiempo.css">
+    <script src="js/linea-de-tiempo.js" defer></script>
     <!-- Fin de recursos propios -->
 
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
@@ -121,7 +122,10 @@
         <p class="entradilla">Tres películas, varios años en la vida de Peter Parker. Esta cronología ordena los momentos clave de la saga, desde la excursión escolar en la que todo empezó hasta la última batalla en Nueva York.</p>
         <p>Cada evento se puede desplegar para ver más detalles. Atención: la cronología cuenta la historia completa, con sus finales.</p>
 
-        <!-- Cada evento tiene un título (h3) y un detalle; el script de la línea de tiempo los convierte en acordeón -->
+        <!-- Botón para desplegar o plegar todos los eventos: lo muestra linea-de-tiempo.js -->
+        <button class="boton-accion linea-tiempo__control" type="button" hidden>Desplegar todos los eventos</button>
+
+        <!-- Cada evento tiene un título (h3) y un detalle; linea-de-tiempo.js los convierte en acordeón -->
         <section class="seccion" aria-labelledby="titulo-2002">
             <h2 id="titulo-2002">Spider-Man (2002)</h2>
             <ol class="linea-tiempo">
@@ -234,7 +238,7 @@
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-26">26 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
