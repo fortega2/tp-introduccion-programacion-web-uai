@@ -2,6 +2,8 @@
    navegacion.js — Menú hamburguesa de la navegación principal
    En mobile el menú arranca cerrado y se abre con el botón "Menú".
    Sin JavaScript el botón queda oculto y el menú se ve completo.
+   El menú ya arranca colapsado por CSS gracias a la clase "con-js" que
+   pone tema.js en <html>; este script solo muestra el botón y lo conecta.
    ========================================================================== */
 
 /* Abre o cierra el menú y deja aria-expanded sincronizado */
@@ -32,9 +34,7 @@ const iniciarMenu = () => {
     const navegacion = document.querySelector('.navegacion');
 
     if (boton && navegacion) {
-        // Con JS disponible, el menú pasa a ser colapsable
         boton.hidden = false;
-        navegacion.classList.add('navegacion--colapsable');
 
         boton.addEventListener('click', () => alternarMenu(boton, navegacion));
         document.addEventListener('keydown', (evento) => cerrarMenuConEscape(evento, boton, navegacion));

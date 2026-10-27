@@ -4,6 +4,9 @@
    tema guardado antes de que se pinte la página y no hay un destello del
    tema equivocado. El botón se conecta recién cuando el DOM está listo.
    Si el usuario nunca eligió, manda la preferencia de su sistema (CSS).
+   Como es el único script que corre antes de pintar, también marca <html>
+   con la clase "con-js": así el CSS colapsa el menú desde el principio y
+   la página no salta cuando navegacion.js se ejecuta.
    ========================================================================== */
 
 /* Clave con la que se guarda la elección del usuario */
@@ -80,7 +83,10 @@ const iniciarBotonTema = () => {
     }
 };
 
-/* Se ejecuta enseguida: aplica el tema guardado antes de pintar */
+/* Se ejecuta enseguida, antes de pintar: marca que hay JavaScript
+   y aplica el tema guardado */
+document.documentElement.classList.add('con-js');
+
 const temaGuardado = leerTemaGuardado();
 
 if (temaGuardado === 'claro' || temaGuardado === 'oscuro') {

@@ -53,6 +53,27 @@
     display: none;
 }
 
+/* Con JavaScript el botón ocupa su lugar desde el primer pintado,
+   invisible hasta que linea-de-tiempo.js lo muestra */
+.con-js .linea-tiempo__control[hidden] {
+    display: inline-block;
+    visibility: hidden;
+}
+
+/* Mientras linea-de-tiempo.js todavía no armó el acordeón, el CSS ya
+   lo dibuja plegado: el título con el alto y la sangría del botón y el
+   detalle oculto. Así la página no salta cuando el script se ejecuta */
+.con-js .evento:not(:has(.evento__boton)) h3 {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline-start: calc(0.6rem + var(--espacio-s));
+}
+
+.con-js .evento:not(:has(.evento__boton)) .evento__detalle {
+    display: none;
+}
+
 /* El título del evento se vuelve un botón que ocupa todo el ancho
    y conserva la tipografía del <h3> */
 .evento__boton {
@@ -71,9 +92,9 @@
     cursor: pointer;
 }
 
-/* Con el botón el título es más alto: el punto de la línea baja
+/* Con el acordeón el título es más alto: el punto de la línea baja
    para quedar centrado con el texto */
-.evento:has(.evento__boton)::before {
+.con-js .evento::before {
     top: 0.875rem;
 }
 

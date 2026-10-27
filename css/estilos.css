@@ -311,6 +311,15 @@ main:focus {
     display: none;
 }
 
+/* Con JavaScript (clase "con-js" que pone tema.js antes de pintar), los
+   botones ocupan su lugar desde el principio, invisibles hasta que su
+   script los muestra: así el encabezado no cambia de alto al aparecer */
+.con-js .boton-menu[hidden],
+.con-js .boton-tema[hidden] {
+    display: inline-flex;
+    visibility: hidden;
+}
+
 /* El botón del tema es solo un ícono, pero mantiene el área táctil */
 .boton-tema {
     min-width: 2.75rem;
@@ -337,8 +346,10 @@ main:focus {
     flex-basis: 100%;
 }
 
-/* Menú colapsado: solo se muestra cuando está abierto */
-.navegacion--colapsable:not(.navegacion--abierta) {
+/* Con JavaScript el menú arranca colapsado y solo se muestra abierto.
+   Depende de "con-js" (no de navegacion.js) para que ya esté colapsado
+   en el primer pintado y el contenido no suba de golpe */
+.con-js .navegacion:not(.navegacion--abierta) {
     display: none;
 }
 
@@ -637,6 +648,13 @@ main:focus {
     display: none;
 }
 
+/* Con JavaScript los filtros ocupan su lugar desde el primer pintado,
+   invisibles hasta que filtros.js los muestra, así la lista no baja de golpe */
+.con-js .filtros[hidden] {
+    display: flex;
+    visibility: hidden;
+}
+
 .filtros__grupo {
     min-width: 0;
     margin: 0;
@@ -695,9 +713,11 @@ main:focus {
     outline-offset: 0.1875rem;
 }
 
-/* Cantidad de resultados: ocupa una fila propia debajo de los grupos */
+/* Cantidad de resultados: ocupa una fila propia debajo de los grupos.
+   Reserva el alto de una línea aunque todavía no tenga texto */
 .filtros__estado {
     flex-basis: 100%;
+    min-height: 1.6em;
     margin: 0;
     color: var(--color-texto-suave);
     font-size: var(--texto-chico);
@@ -994,11 +1014,12 @@ main:focus {
 @media (min-width: 80rem) {
     /* En escritorio el menú siempre está a la vista */
     .boton-menu,
-    .boton-menu[hidden] {
+    .boton-menu[hidden],
+    .con-js .boton-menu[hidden] {
         display: none;
     }
 
-    .navegacion--colapsable:not(.navegacion--abierta) {
+    .con-js .navegacion:not(.navegacion--abierta) {
         display: block;
     }
 
