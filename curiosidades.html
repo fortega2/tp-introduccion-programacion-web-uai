@@ -56,6 +56,11 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <link rel="stylesheet" href="css/quiz.css">
+    <script src="js/quiz.js" defer></script>
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -246,12 +251,193 @@
                 <li><strong>Stan Lee</strong>, cocreador del personaje: aparece en cada película salvando a alguien de unos escombros o charlando con Peter.</li>
             </ul>
         </section>
+        <!-- Quiz: necesita JavaScript para corregirse, así que quiz.js lo muestra.
+             Cada pregunta indica su respuesta en data-correcta -->
+        <section class="seccion" id="quiz" aria-labelledby="titulo-quiz" hidden>
+            <h2 id="titulo-quiz">¿Cuánto sabés de la trilogía?</h2>
+            <p>Ocho preguntas sobre las curiosidades de esta página. Elegí una respuesta en cada una y, al final, tocá "Ver resultado".</p>
+            <form class="quiz">
+            <fieldset class="quiz__pregunta" data-correcta="c">
+                <legend>1. ¿Cuántas tomas hicieron falta para filmar la escena de la bandeja en <cite>Spider-Man</cite> (2002)?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-1-a" name="pregunta-1" value="a">
+                        <label for="quiz-1-a">15</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-1-b" name="pregunta-1" value="b">
+                        <label for="quiz-1-b">56</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-1-c" name="pregunta-1" value="c">
+                        <label for="quiz-1-c">156</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-1-d" name="pregunta-1" value="d">
+                        <label for="quiz-1-d">1.056</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Fueron 156 tomas y unas 16 horas de rodaje, con la bandeja pegada a la mano de Tobey Maguire.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="a">
+                <legend>2. ¿Qué actor estuvo a punto de reemplazar a Tobey Maguire en <cite>Spider-Man 2</cite>?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-2-a" name="pregunta-2" value="a">
+                        <label for="quiz-2-a">Jake Gyllenhaal</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-2-b" name="pregunta-2" value="b">
+                        <label for="quiz-2-b">James Franco</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-2-c" name="pregunta-2" value="c">
+                        <label for="quiz-2-c">Andrew Garfield</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-2-d" name="pregunta-2" value="d">
+                        <label for="quiz-2-d">Tom Holland</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Una lesión en la espalda puso en duda a Maguire, y el estudio llegó a elegir a Jake Gyllenhaal.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="b">
+                <legend>3. ¿De dónde salen las telarañas de Peter en las películas de Raimi?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-3-a" name="pregunta-3" value="a">
+                        <label for="quiz-3-a">De unos lanzatelarañas que él mismo inventa</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-3-b" name="pregunta-3" value="b">
+                        <label for="quiz-3-b">De sus muñecas, como parte de sus poderes</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-3-c" name="pregunta-3" value="c">
+                        <label for="quiz-3-c">De unos cartuchos escondidos en el traje</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Las telarañas orgánicas venían de un tratamiento de James Cameron y fueron uno de los cambios más discutidos.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="c">
+                <legend>4. ¿Qué actor insistió en usar él mismo el traje del Duende Verde?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-4-a" name="pregunta-4" value="a">
+                        <label for="quiz-4-a">J. K. Simmons</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-4-b" name="pregunta-4" value="b">
+                        <label for="quiz-4-b">Thomas Haden Church</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-4-c" name="pregunta-4" value="c">
+                        <label for="quiz-4-c">Willem Dafoe</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-4-d" name="pregunta-4" value="d">
+                        <label for="quiz-4-d">Alfred Molina</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Willem Dafoe creía que un doble no podría transmitir el lenguaje corporal del personaje.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="b">
+                <legend>5. ¿En qué ciudad se filmaron las tomas de fondo de la pelea del tren?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-5-a" name="pregunta-5" value="a">
+                        <label for="quiz-5-a">Nueva York</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-5-b" name="pregunta-5" value="b">
+                        <label for="quiz-5-b">Chicago</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-5-c" name="pregunta-5" value="c">
+                        <label for="quiz-5-c">Los Ángeles</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Se filmó en el tren elevado de Chicago, con dieciséis cámaras montadas en los vagones.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="c">
+                <legend>6. ¿Qué villano sumó Raimi a <cite>Spider-Man 3</cite> a pedido del productor Avi Arad?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-6-a" name="pregunta-6" value="a">
+                        <label for="quiz-6-a">El Hombre de Arena</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-6-b" name="pregunta-6" value="b">
+                        <label for="quiz-6-b">El Nuevo Duende</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-6-c" name="pregunta-6" value="c">
+                        <label for="quiz-6-c">Venom</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-6-d" name="pregunta-6" value="d">
+                        <label for="quiz-6-d">El Doctor Octopus</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Raimi había criticado a Venom por su falta de humanidad y no pensaba incluirlo.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="b">
+                <legend>7. ¿Qué personaje interpreta Bruce Campbell en <cite>Spider-Man 2</cite>?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-7-a" name="pregunta-7" value="a">
+                        <label for="quiz-7-a">El presentador de lucha libre</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-7-b" name="pregunta-7" value="b">
+                        <label for="quiz-7-b">El acomodador del teatro</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-7-c" name="pregunta-7" value="c">
+                        <label for="quiz-7-c">El <span lang="fr">maître</span> del restaurante francés</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Es el acomodador que no deja entrar a Peter al teatro. El presentador es de la primera película y el <span lang="fr">maître</span>, de la tercera.</p>
+            </fieldset>
+            <fieldset class="quiz__pregunta" data-correcta="b">
+                <legend>8. ¿Qué pasó con <cite>Spider-Man 4</cite>?</legend>
+                <div class="quiz__opciones">
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-8-a" name="pregunta-8" value="a">
+                        <label for="quiz-8-a">Se estrenó en 2011 con otro director</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-8-b" name="pregunta-8" value="b">
+                        <label for="quiz-8-b">Sony la canceló en 2010 y reinició la saga</label>
+                    </div>
+                    <div class="quiz__opcion">
+                        <input type="radio" id="quiz-8-c" name="pregunta-8" value="c">
+                        <label for="quiz-8-c">Se convirtió en una serie animada</label>
+                    </div>
+                </div>
+                <p class="quiz__correccion" hidden></p>
+                <p class="quiz__explicacion" hidden>Tenía fecha para mayo de 2011, pero Sony la canceló y la saga volvió en 2012 con Andrew Garfield.</p>
+            </fieldset>
+                <div class="quiz__acciones">
+                    <button class="boton-accion quiz__boton" type="submit">Ver resultado</button>
+                    <button class="quiz__reintentar" type="reset" hidden>Volver a intentar</button>
+                </div>
+                <p class="quiz__resultado" role="status" tabindex="-1"></p>
+            </form>
+        </section>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-25">25 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-26">26 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->

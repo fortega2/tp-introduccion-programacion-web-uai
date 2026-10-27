@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Quiz — estilos propios de curiosidades.html
+   Se carga solo en esa página, después de estilos.css, y usa sus variables.
+   ========================================================================== */
+
+/* Preguntas en una columna, con el ancho de lectura */
+.quiz {
+    display: grid;
+    gap: var(--espacio-l);
+    max-width: var(--ancho-lectura);
+}
+
+/* Cada pregunta es una tarjeta; el borde izquierdo marca la corrección */
+.quiz__pregunta {
+    min-width: 0;
+    margin: 0;
+    padding: var(--espacio-m) var(--espacio-l);
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-left: 0.3125rem solid var(--color-borde);
+    border-radius: var(--radio);
+}
+
+.quiz__pregunta legend {
+    float: left;
+    width: 100%;
+    margin-block-end: var(--espacio-s);
+    padding: 0;
+    font-weight: 700;
+}
+
+.quiz__opciones {
+    clear: both;
+    display: grid;
+    gap: var(--espacio-xs);
+}
+
+/* Opción: radio y texto alineados, con un área cómoda para tocar */
+.quiz__opcion {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-s);
+    min-height: 2.75rem;
+}
+
+.quiz__opcion input {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    accent-color: var(--color-enlace);
+}
+
+.quiz__opcion label {
+    cursor: pointer;
+}
+
+/* Corrección: el texto dice "Correcto" o "Incorrecto"; el color acompaña */
+.quiz__correccion {
+    margin: var(--espacio-s) 0 var(--espacio-xs);
+    font-weight: 700;
+}
+
+.quiz__explicacion {
+    margin: 0;
+    color: var(--color-texto-suave);
+}
+
+.quiz__pregunta--correcta {
+    border-left-color: var(--color-enlace);
+}
+
+.quiz__pregunta--correcta .quiz__correccion {
+    color: var(--color-enlace);
+}
+
+.quiz__pregunta--incorrecta {
+    border-left-color: var(--color-acento);
+}
+
+.quiz__pregunta--incorrecta .quiz__correccion {
+    color: var(--color-acento);
+}
+
+/* Botones de enviar y volver a intentar */
+.quiz__acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-m);
+}
+
+.quiz__boton {
+    border: 0;
+    cursor: pointer;
+}
+
+.quiz__reintentar {
+    min-height: 2.75rem;
+    padding: var(--espacio-s) var(--espacio-l);
+    background-color: transparent;
+    color: var(--color-enlace);
+    font-weight: 700;
+    border: 0.125rem solid var(--color-enlace);
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.quiz__reintentar:hover {
+    background-color: var(--color-superficie);
+}
+
+.quiz__reintentar[hidden] {
+    display: none;
+}
+
+/* Resultado final o aviso de preguntas faltantes */
+.quiz__resultado {
+    margin: 0;
+    font-size: 1.1875rem;
+    font-weight: 700;
+}
+
+.quiz__resultado--aviso {
+    color: var(--color-acento);
+}
