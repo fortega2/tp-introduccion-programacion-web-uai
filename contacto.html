@@ -56,6 +56,11 @@
     <link rel="stylesheet" href="css/estilos.css">
 
 
+    <!-- Recursos propios de esta página -->
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js/validacion-formulario.js" defer></script>
+    <!-- Fin de recursos propios -->
+
     <!-- Tema: sin defer para aplicar el modo oscuro antes de pintar (ver tema.js) -->
     <script src="js/tema.js"></script>
 
@@ -115,12 +120,62 @@
     <main id="contenido" class="contenido" tabindex="-1">
         <h1>Contacto</h1>
         <p>¿Encontraste un error, querés sugerir un tema o simplemente compartir tu opinión sobre la trilogía? Completá el formulario y dejanos tu mensaje.</p>
+        <p class="nota">Los campos marcados con un asterisco (*) son obligatorios. Este sitio no tiene servidor, así que el envío es una demostración: tus datos no se guardan ni se mandan a ningún lado.</p>
+
+        <!-- Formulario de contacto: validacion-formulario.js lo valida en el navegador y simula el envío.
+             Sin JavaScript, valen las validaciones nativas (required, type="email", minlength) -->
+        <form class="formulario" action="contacto.html" method="get" aria-label="Formulario de contacto">
+            <div class="campo">
+                <label for="nombre">Nombre <span aria-hidden="true">*</span></label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="2" maxlength="60"
+                       aria-describedby="error-nombre">
+                <p class="campo__error" id="error-nombre" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required maxlength="100"
+                       aria-describedby="ayuda-email error-email">
+                <p class="campo__ayuda" id="ayuda-email">Por ejemplo: nombre@correo.com</p>
+                <p class="campo__error" id="error-email" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+                <label for="motivo">Motivo <span aria-hidden="true">*</span></label>
+                <select id="motivo" name="motivo" required aria-describedby="error-motivo">
+                    <option value="">Elegí un motivo</option>
+                    <option value="comentario">Comentario</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="error">Error en el sitio</option>
+                </select>
+                <p class="campo__error" id="error-motivo" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+                <textarea id="mensaje" name="mensaje" rows="6" required minlength="20" maxlength="1000"
+                          aria-describedby="ayuda-mensaje error-mensaje"></textarea>
+                <p class="campo__ayuda" id="ayuda-mensaje">Entre 20 y 1000 caracteres.</p>
+                <p class="campo__error" id="error-mensaje" aria-live="polite"></p>
+            </div>
+
+            <div class="campo campo--casilla">
+                <input type="checkbox" id="acepto" name="acepto" required aria-describedby="error-acepto">
+                <label for="acepto">Acepto que mis datos se usen solo para responder este mensaje. <span aria-hidden="true">*</span></label>
+                <p class="campo__error" id="error-acepto" aria-live="polite"></p>
+            </div>
+
+            <button class="boton-accion formulario__enviar" type="submit">Enviar mensaje</button>
+            <p class="formulario__aviso" role="alert"></p>
+            <p class="formulario__confirmacion" role="status" tabindex="-1"></p>
+        </form>
     </main>
 
     <!-- ===== Pie de página (bloque replicado en todas las páginas) ===== -->
     <footer class="pie">
         <p>Hecho por Facundo Ernesto Ortega para Introducción a la Programación Web (UAI).</p>
-        <p>Última actualización: <time datetime="2026-10-24">24 de octubre de 2026</time></p>
+        <p>Última actualización: <time datetime="2026-10-26">26 de octubre de 2026</time></p>
     </footer>
 
     <!-- Botón "volver arriba": volver-arriba.js lo muestra al bajar la página -->
