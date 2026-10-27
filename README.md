@@ -36,10 +36,38 @@ Brindar información completa y organizada sobre la trilogía: fichas de las tre
 ├── contacto.html           Formulario de contacto
 ├── manifest.json           Manifiesto de la web app (PWA)
 ├── favicon.ico / .svg      Íconos de la pestaña
-├── css/                    Hojas de estilo
+├── css/
+│   ├── estilos.css         Hoja principal (variables, base y componentes compartidos)
+│   ├── linea-de-tiempo.css Solo línea de tiempo
+│   ├── blog.css            Solo blog
+│   ├── quiz.css            Solo curiosidades (quiz)
+│   └── contacto.css        Solo contacto (formulario)
 ├── js/                     Un archivo por funcionalidad
+│   ├── tema.js             Modo oscuro (sin defer, para aplicarlo antes de pintar)
+│   ├── navegacion.js       Menú hamburguesa
+│   ├── volver-arriba.js    Botón "volver arriba"
+│   ├── filtros.js          Filtros de personajes, villanos y blog
+│   ├── linea-de-tiempo.js  Acordeón de la línea de tiempo
+│   ├── galeria.js          Lightbox de las galerías
+│   ├── quiz.js             Quiz de curiosidades
+│   └── validacion-formulario.js  Validación del formulario de contacto
 └── images/                 Imágenes optimizadas (< 200 KB c/u)
 ```
+
+## Funcionalidades JavaScript
+
+Cada página carga solo los scripts que usa. Sin JavaScript el contenido se sigue viendo completo: los controles que lo necesitan (filtros, quiz, botones del menú y del tema) arrancan ocultos y el script los muestra.
+
+| Funcionalidad | Páginas | Archivo |
+|---|---|---|
+| Menú hamburguesa en mobile, que se cierra con Escape | Todas | `navegacion.js` |
+| Modo oscuro con la elección guardada en `localStorage` | Todas | `tema.js` |
+| Botón "volver arriba" con scroll suave | Todas | `volver-arriba.js` |
+| Filtros por película y categoría, con el conteo de resultados anunciado | Personajes, Villanos, Blog | `filtros.js` |
+| Acordeón de eventos, con un botón para desplegar o plegar todos | Línea de tiempo | `linea-de-tiempo.js` |
+| Lightbox de escenas (`<dialog>`), con flechas del teclado y Escape | Las tres películas | `galeria.js` |
+| Quiz de 8 preguntas con corrección, explicación y puntaje | Curiosidades | `quiz.js` |
+| Validación del formulario con mensajes por campo y envío simulado | Contacto | `validacion-formulario.js` |
 
 ## Cómo verlo localmente
 
